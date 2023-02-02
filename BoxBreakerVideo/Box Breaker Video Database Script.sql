@@ -67,15 +67,16 @@ SET IDENTITY_INSERT Members OFF
 
 CREATE TABLE MemberMovies
 (
-    VideoId             bigint         REFERENCES Movie(MovieId),	  
+    PRIMARY KEY(MovieId, MemberId),
+    MovieId             bigint         REFERENCES Movie(MovieId),	  
     MemberId	        int            REFERENCES Members(MemberId),	 
 	CheckoutDate		dateTime	   NOT NULL,
-    DueDate	            datetime       NOT NULL  
+    DueDate	            date       NOT NULL  
 )
 
-INSERT INTO MemberMovies (VideoId, MemberId, CheckoutDate, DueDate)
-VALUES (2, 1000, GetDate(), ''),
-        (1, 2000, GetDate(), '')
+INSERT INTO MemberMovies (MovieId, MemberId, CheckoutDate, DueDate)
+VALUES (2, 1000, GetDate(), GETDATE() + 3),
+        (1, 2000, GetDate(), GETDATE() + 3)
 
 
 --for adding later--
