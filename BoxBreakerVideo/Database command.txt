@@ -1,0 +1,1 @@
+﻿Scaffold-DbContext 'Data Source =(localdb)\MSSQLLocalDb;Initial Catalog = BoxBreakerVideo' Microsoft.EntityFrameworkCore.SqlServer
