@@ -1,5 +1,5 @@
 ﻿namespace BoxBreakerVideo {
-	partial class Form1 {
+	partial class formUserLogin {
 		/// <summary>
 		///  Required designer variable.
 		/// </summary>
@@ -39,6 +39,7 @@
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnCancel
             // 
@@ -48,6 +49,7 @@
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // txtbxEmail
             // 
@@ -81,7 +83,7 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Password";
             // 
-            // Form1
+            // formUserLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -92,7 +94,7 @@
             this.Controls.Add(this.txtbxEmail);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnLogin);
-            this.Name = "Form1";
+            this.Name = "formUserLogin";
             this.Text = "User Login";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
