@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace BoxBreakerVideo.Models;
 
 public partial class Member
 {
+    [Key]
     public int MemberId { get; set; }
 
     public string MemberFname { get; set; } = null!;
