@@ -29,6 +29,7 @@
             this.txtbxPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnNewUser = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -83,11 +84,22 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Password";
             // 
+            // btnNewUser
+            // 
+            this.btnNewUser.Location = new System.Drawing.Point(62, 362);
+            this.btnNewUser.Name = "btnNewUser";
+            this.btnNewUser.Size = new System.Drawing.Size(178, 63);
+            this.btnNewUser.TabIndex = 6;
+            this.btnNewUser.Text = "New Member";
+            this.btnNewUser.UseVisualStyleBackColor = true;
+            this.btnNewUser.Click += new System.EventHandler(this.btnNewUser_Click);
+            // 
             // formUserLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(537, 450);
+            this.Controls.Add(this.btnNewUser);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtbxPassword);
@@ -95,7 +107,7 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnLogin);
             this.Name = "formUserLogin";
-            this.Text = "User Login";
+            this.Text = "Member Login";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -110,5 +122,6 @@
         private TextBox txtbxPassword;
         private Label label1;
         private Label label2;
+        private Button btnNewUser;
     }
 }

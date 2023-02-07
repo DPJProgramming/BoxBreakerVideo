@@ -45,5 +45,11 @@ namespace BoxBreakerVideo {
         private void btnCancel_Click(object sender, EventArgs e) {
             Close();
         }
+
+        private void btnNewUser_Click(object sender, EventArgs e) {
+            NewMemberForm newMember = new NewMemberForm();
+
+            newMember.ShowDialog();
+        }
     }
 }
