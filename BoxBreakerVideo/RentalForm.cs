@@ -13,5 +13,10 @@ namespace BoxBreakerVideo {
         public FormRentalForm() {
             InitializeComponent();
         }
+
+        private void cbxMovie_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
