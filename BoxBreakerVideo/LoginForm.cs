@@ -17,26 +17,23 @@ namespace BoxBreakerVideo {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnLogin_Click(object sender, EventArgs e) {
-
-                //validate user login data
-                //make new connection to database
+            //BoxBreakerVideoContext.Update();
+            //make new connection to database
             BoxBreakerVideoContext connection = new BoxBreakerVideoContext();
 
-                //make a list of member objects from member table
+            //make a list of member objects from member table
             List<Member> memberList = connection.Members.ToList(); 
 
-                //check each memebers email and password in table and compare with Login form input
+            //check each members email and password in table and compare with Login form input
             foreach (Member validMember in memberList) {
-                    
-                    //if valid, open rental form
+                Console.WriteLine(validMember.MemberEmail);
+                Console.WriteLine(validMember.MemberPassword);
+
+                //if valid, open rental form
                 if (validMember.MemberEmail == txtbxEmail.Text && validMember.MemberPassword == txtbxPassword.Text) {
+
                     FormRentalForm newRental = new FormRentalForm();
                     newRental.ShowDialog();
-                    break;
-                }
-                    //if invalid popup a notice
-                else {
-                    MessageBox.Show("Invalid Email or Password");
                     break;
                 }
             }

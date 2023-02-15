@@ -25,7 +25,7 @@
         private void InitializeComponent() {
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.txtbxFirstNmae = new System.Windows.Forms.TextBox();
+            this.txtbxFirstName = new System.Windows.Forms.TextBox();
             this.txtbxPassword = new System.Windows.Forms.TextBox();
             this.txtbxAddress = new System.Windows.Forms.TextBox();
             this.txtbxEmail = new System.Windows.Forms.TextBox();
@@ -47,6 +47,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Register";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -58,12 +59,12 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // txtbxFirstNmae
+            // txtbxFirstName
             // 
-            this.txtbxFirstNmae.Location = new System.Drawing.Point(295, 43);
-            this.txtbxFirstNmae.Name = "txtbxFirstNmae";
-            this.txtbxFirstNmae.Size = new System.Drawing.Size(440, 27);
-            this.txtbxFirstNmae.TabIndex = 2;
+            this.txtbxFirstName.Location = new System.Drawing.Point(295, 43);
+            this.txtbxFirstName.Name = "txtbxFirstName";
+            this.txtbxFirstName.Size = new System.Drawing.Size(440, 27);
+            this.txtbxFirstName.TabIndex = 2;
             // 
             // txtbxPassword
             // 
@@ -170,7 +171,7 @@
             this.Controls.Add(this.txtbxEmail);
             this.Controls.Add(this.txtbxAddress);
             this.Controls.Add(this.txtbxPassword);
-            this.Controls.Add(this.txtbxFirstNmae);
+            this.Controls.Add(this.txtbxFirstName);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "NewMemberForm";
@@ -184,7 +185,7 @@
 
         private Button button1;
         private Button button2;
-        private TextBox txtbxFirstNmae;
+        private TextBox txtbxFirstName;
         private TextBox txtbxPassword;
         private TextBox txtbxAddress;
         private TextBox txtbxEmail;
