@@ -17,25 +17,17 @@ namespace BoxBreakerVideo {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnLogin_Click(object sender, EventArgs e) {
-            //BoxBreakerVideoContext.Update();
-            //make new connection to database
-            BoxBreakerVideoContext connection = new BoxBreakerVideoContext();
+            //make new connection to the database
+            BoxBreakerVideoContext database = new BoxBreakerVideoContext();
 
-            //make a list of member objects from member table
-            List<Member> memberList = connection.Members.ToList(); 
-
-            //check each members email and password in table and compare with Login form input
-            foreach (Member validMember in memberList) {
-                Console.WriteLine(validMember.MemberEmail);
-                Console.WriteLine(validMember.MemberPassword);
-
-                //if valid, open rental form
-                if (validMember.MemberEmail == txtbxEmail.Text && validMember.MemberPassword == txtbxPassword.Text) {
-
-                    FormRentalForm newRental = new FormRentalForm();
-                    newRental.ShowDialog();
-                    break;
-                }
+            //if credentials are valid, open rental form
+            if (database.Members.Where(data => data.MemberEmail == txtbxEmail.Text && data.MemberPassword == txtbxPassword.Text).Any()) {
+                FormRentalForm newRental = new FormRentalForm();
+                newRental.ShowDialog();
+            }
+            //otherwise failed login window pops up
+            else {
+                MessageBox.Show("Incorrect Email and/or Password");
             }
         }
 
