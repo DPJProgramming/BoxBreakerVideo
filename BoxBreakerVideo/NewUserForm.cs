@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net.Mail; //used for validating email
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace BoxBreakerVideo {
     public partial class NewMemberForm : Form {
@@ -26,12 +28,10 @@ namespace BoxBreakerVideo {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e) {
-            //BoxBreakerVideoContext.Update();
-            using BoxBreakerVideoContext database = new();
-
-            //validate inputs
 
             if (validInputs()) {
+                using BoxBreakerVideoContext database = new();
+
                 //insert into database
                 Member newMember = new Member() {
                     MemberFname = txtbxFirstName.Text,
@@ -45,7 +45,9 @@ namespace BoxBreakerVideo {
                 database.SaveChanges();
                 MessageBox.Show("Registration Successfull");
                 Close();
-
+            }
+            else {
+                MessageBox.Show("Registration Unsuccessfull");
             }
 
         }
@@ -55,6 +57,29 @@ namespace BoxBreakerVideo {
         /// </summary>
         /// <returns> true if inputs are valid false if not</returns>
         private bool validInputs() {
+
+            //validate first name
+            if (txtbxFirstName.Text.Equals("") || !txtbxFirstName.Text.All(Char.IsLetter)) {
+                return false;
+            }
+
+            //validate last name
+            if (txtbxLastName.Text.Equals("") || !txtbxLastName.Text.All(Char.IsLetter)) {
+                return false;
+            }
+
+            //validate Email
+            if (txtbxEmail.Text.Equals("")) {
+                return false;
+            }
+
+            //second email validation
+            try { 
+                var emailAddress = new MailAddress(txtbxEmail.Text);
+            }
+            catch {
+                return false;
+            }      
             return true;
         }
     }
