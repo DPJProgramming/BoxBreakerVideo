@@ -61,35 +61,35 @@
             // 
             // txtbxFirstName
             // 
-            this.txtbxFirstName.Location = new System.Drawing.Point(295, 43);
+            this.txtbxFirstName.Location = new System.Drawing.Point(295, 47);
             this.txtbxFirstName.Name = "txtbxFirstName";
             this.txtbxFirstName.Size = new System.Drawing.Size(440, 27);
             this.txtbxFirstName.TabIndex = 2;
             // 
             // txtbxPassword
             // 
-            this.txtbxPassword.Location = new System.Drawing.Point(295, 244);
+            this.txtbxPassword.Location = new System.Drawing.Point(295, 248);
             this.txtbxPassword.Name = "txtbxPassword";
             this.txtbxPassword.Size = new System.Drawing.Size(440, 27);
             this.txtbxPassword.TabIndex = 3;
             // 
             // txtbxAddress
             // 
-            this.txtbxAddress.Location = new System.Drawing.Point(295, 189);
+            this.txtbxAddress.Location = new System.Drawing.Point(295, 202);
             this.txtbxAddress.Name = "txtbxAddress";
             this.txtbxAddress.Size = new System.Drawing.Size(440, 27);
             this.txtbxAddress.TabIndex = 4;
             // 
             // txtbxEmail
             // 
-            this.txtbxEmail.Location = new System.Drawing.Point(295, 134);
+            this.txtbxEmail.Location = new System.Drawing.Point(295, 148);
             this.txtbxEmail.Name = "txtbxEmail";
             this.txtbxEmail.Size = new System.Drawing.Size(440, 27);
             this.txtbxEmail.TabIndex = 5;
             // 
             // txtbxLastName
             // 
-            this.txtbxLastName.Location = new System.Drawing.Point(295, 88);
+            this.txtbxLastName.Location = new System.Drawing.Point(295, 92);
             this.txtbxLastName.Name = "txtbxLastName";
             this.txtbxLastName.Size = new System.Drawing.Size(440, 27);
             this.txtbxLastName.TabIndex = 6;
@@ -144,15 +144,16 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(127, 302);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(108, 20);
+            this.label6.Size = new System.Drawing.Size(202, 20);
             this.label6.TabIndex = 13;
-            this.label6.Text = "Phone Number";
+            this.label6.Text = "Phone Number (1234567890)";
             // 
             // txtbxPhone
             // 
-            this.txtbxPhone.Location = new System.Drawing.Point(295, 295);
+            this.txtbxPhone.Location = new System.Drawing.Point(347, 299);
+            this.txtbxPhone.MaxLength = 10;
             this.txtbxPhone.Name = "txtbxPhone";
-            this.txtbxPhone.Size = new System.Drawing.Size(440, 27);
+            this.txtbxPhone.Size = new System.Drawing.Size(388, 27);
             this.txtbxPhone.TabIndex = 12;
             // 
             // NewMemberForm

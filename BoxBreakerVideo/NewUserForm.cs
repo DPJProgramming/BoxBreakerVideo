@@ -59,27 +59,46 @@ namespace BoxBreakerVideo {
         private bool validInputs() {
 
             //validate first name
+            //if its blank or contains something other than letters
             if (txtbxFirstName.Text.Equals("") || !txtbxFirstName.Text.All(Char.IsLetter)) {
                 return false;
             }
 
             //validate last name
+            //if its blank or contains something other than letters
             if (txtbxLastName.Text.Equals("") || !txtbxLastName.Text.All(Char.IsLetter)) {
                 return false;
             }
 
             //validate Email
+            //if field is blank or in the wrong format
             if (txtbxEmail.Text.Equals("")) {
                 return false;
             }
-
-            //second email validation
             try { 
                 var emailAddress = new MailAddress(txtbxEmail.Text);
             }
             catch {
                 return false;
-            }      
+            }    
+            
+            //validate shipping address
+            //if it's blank
+            if(txtbxAddress.Text == "") {
+                return false;
+            }
+
+            //validate password
+            if(txtbxPassword.Text == "") {
+                return false;
+            }
+
+            //validate phone number
+            //if there is anything except a number
+            //if it is not long enough
+            if(txtbxPhone.Text == "" || txtbxPhone.Text.Any(Char.IsLetter) || txtbxPhone.Text.Length < 10) {
+                return false;
+            }
             return true;
         }
     }
