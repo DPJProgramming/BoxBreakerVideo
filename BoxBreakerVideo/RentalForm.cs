@@ -23,7 +23,7 @@ namespace BoxBreakerVideo
             //Connect to DB
             BoxBreakerVideoContext connection = new BoxBreakerVideoContext();
 
-            
+
             //Grab selected movie, string first to avoid wrapping issues.
 
             string selectedTitle = cbxMovie.SelectedItem.ToString();
@@ -41,7 +41,7 @@ namespace BoxBreakerVideo
 
         private void FormRentalForm_Load(object sender, EventArgs e)
         {
-            
+
             PopulateMovieList();
         }
 
@@ -60,6 +60,29 @@ namespace BoxBreakerVideo
             {
                 cbxMovie.Items.Add(movie.Title);
             }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            decimal total = 0;
+            //Connect to DB
+            BoxBreakerVideoContext connection = new BoxBreakerVideoContext();
+
+
+            //Grab selected movie, string first to avoid wrapping issues (copied from cbx method)
+
+            string selectedTitle = cbxMovie.SelectedItem.ToString();
+            Movie selectedMovie = connection.Movies.FirstOrDefault(movie => movie.Title == selectedTitle);
+
+            //Populate the listView with current order
+            lstViewOrder.Items.Add(selectedMovie.Title + ", " + selectedMovie.MoviePrice);
+            txtbxTotal.Text = Convert.ToString(selectedMovie.MoviePrice + total);
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            lstViewOrder.Items.Clear();
+            txtbxTotal.Clear();
         }
     }
 }

@@ -46,6 +46,10 @@
             label2 = new Label();
             txtbxRating = new TextBox();
             txtbxTitle = new TextBox();
+            lstViewOrder = new ListView();
+            label8 = new Label();
+            txtbxTotal = new TextBox();
+            btnClear = new Button();
             gbxMovie.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbxPoster).BeginInit();
             SuspendLayout();
@@ -85,7 +89,7 @@
             gbxMovie.Controls.Add(label2);
             gbxMovie.Controls.Add(txtbxRating);
             gbxMovie.Controls.Add(txtbxTitle);
-            gbxMovie.Location = new Point(12, 116);
+            gbxMovie.Location = new Point(12, 153);
             gbxMovie.Name = "gbxMovie";
             gbxMovie.Size = new Size(523, 302);
             gbxMovie.TabIndex = 2;
@@ -127,6 +131,7 @@
             btnAdd.TabIndex = 11;
             btnAdd.Text = "Add to Order";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // label6
             // 
@@ -222,11 +227,50 @@
             txtbxTitle.Size = new Size(131, 23);
             txtbxTitle.TabIndex = 0;
             // 
+            // lstViewOrder
+            // 
+            lstViewOrder.Location = new Point(298, 15);
+            lstViewOrder.Name = "lstViewOrder";
+            lstViewOrder.Size = new Size(237, 110);
+            lstViewOrder.TabIndex = 3;
+            lstViewOrder.UseCompatibleStateImageBehavior = false;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(391, 135);
+            label8.Name = "label8";
+            label8.Size = new Size(32, 15);
+            label8.TabIndex = 4;
+            label8.Text = "Total";
+            // 
+            // txtbxTotal
+            // 
+            txtbxTotal.Enabled = false;
+            txtbxTotal.Location = new Point(429, 131);
+            txtbxTotal.Name = "txtbxTotal";
+            txtbxTotal.Size = new Size(100, 23);
+            txtbxTotal.TabIndex = 5;
+            // 
+            // btnClear
+            // 
+            btnClear.Location = new Point(298, 131);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(75, 23);
+            btnClear.TabIndex = 6;
+            btnClear.Text = "Clear Order";
+            btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
+            // 
             // FormRentalForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(544, 426);
+            ClientSize = new Size(548, 467);
+            Controls.Add(btnClear);
+            Controls.Add(txtbxTotal);
+            Controls.Add(label8);
+            Controls.Add(lstViewOrder);
             Controls.Add(gbxMovie);
             Controls.Add(label1);
             Controls.Add(cbxMovie);
@@ -261,6 +305,9 @@
         private Button btnCancel;
         private Button btnCheckout;
         private Button btnAdd;
-
+        private ListView lstViewOrder;
+        private Label label8;
+        private TextBox txtbxTotal;
+        private Button btnClear;
     }
 }
