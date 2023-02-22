@@ -84,5 +84,10 @@ namespace BoxBreakerVideo
             lstViewOrder.Items.Clear();
             txtbxTotal.Clear();
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
