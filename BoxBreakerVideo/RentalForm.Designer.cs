@@ -156,6 +156,7 @@
             pbxPoster.Location = new Point(383, 37);
             pbxPoster.Name = "pbxPoster";
             pbxPoster.Size = new Size(134, 115);
+            pbxPoster.SizeMode = PictureBoxSizeMode.StretchImage;
             pbxPoster.TabIndex = 8;
             pbxPoster.TabStop = false;
             // 
