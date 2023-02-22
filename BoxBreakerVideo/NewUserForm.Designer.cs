@@ -36,7 +36,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtbxPhone = new System.Windows.Forms.TextBox();
+            this.txtbxPhone = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -144,25 +144,25 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(127, 302);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(202, 20);
+            this.label6.Size = new System.Drawing.Size(108, 20);
             this.label6.TabIndex = 13;
-            this.label6.Text = "Phone Number (1234567890)";
+            this.label6.Text = "Phone Number";
             // 
             // txtbxPhone
             // 
-            this.txtbxPhone.Location = new System.Drawing.Point(347, 299);
-            this.txtbxPhone.MaxLength = 10;
+            this.txtbxPhone.Location = new System.Drawing.Point(300, 301);
+            this.txtbxPhone.Mask = "(999) 000-0000";
             this.txtbxPhone.Name = "txtbxPhone";
-            this.txtbxPhone.Size = new System.Drawing.Size(388, 27);
-            this.txtbxPhone.TabIndex = 12;
+            this.txtbxPhone.Size = new System.Drawing.Size(119, 27);
+            this.txtbxPhone.TabIndex = 14;
             // 
             // NewMemberForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(899, 531);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.txtbxPhone);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -197,6 +197,6 @@
         private Label label4;
         private Label label5;
         private Label label6;
-        private TextBox txtbxPhone;
+        private MaskedTextBox txtbxPhone;
     }
 }

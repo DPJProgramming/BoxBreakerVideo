@@ -95,8 +95,8 @@ namespace BoxBreakerVideo {
 
             //validate phone number
             //if there is anything except a number
-            //if it is not long enough
-            if(txtbxPhone.Text == "" || txtbxPhone.Text.Any(Char.IsLetter) || txtbxPhone.Text.Length < 10) {
+            //if not filled completely
+            if(txtbxPhone.Text == "" || !txtbxPhone.MaskCompleted) {
                 return false;
             }
             return true;
