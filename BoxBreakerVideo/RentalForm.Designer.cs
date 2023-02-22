@@ -1,5 +1,7 @@
-﻿namespace BoxBreakerVideo {
-    partial class FormRentalForm {
+﻿namespace BoxBreakerVideo
+{
+    partial class FormRentalForm
+    {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -9,8 +11,10 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing) {
-            if (disposing && (components != null)) {
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -22,218 +26,219 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent() {
-            this.cbxMovie = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.gbxMovie = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnCheckout = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtbxDesc = new System.Windows.Forms.TextBox();
-            this.pbxPoster = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtbxPrice = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtbxGenre = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtbxRating = new System.Windows.Forms.TextBox();
-            this.txtbxTitle = new System.Windows.Forms.TextBox();
-            this.gbxMovie.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxPoster)).BeginInit();
-            this.SuspendLayout();
+        private void InitializeComponent()
+        {
+            cbxMovie = new ComboBox();
+            label1 = new Label();
+            gbxMovie = new GroupBox();
+            label7 = new Label();
+            btnCancel = new Button();
+            btnCheckout = new Button();
+            btnAdd = new Button();
+            label6 = new Label();
+            txtbxDesc = new TextBox();
+            pbxPoster = new PictureBox();
+            label5 = new Label();
+            txtbxPrice = new TextBox();
+            label4 = new Label();
+            txtbxGenre = new TextBox();
+            label3 = new Label();
+            label2 = new Label();
+            txtbxRating = new TextBox();
+            txtbxTitle = new TextBox();
+            gbxMovie.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pbxPoster).BeginInit();
+            SuspendLayout();
             // 
             // cbxMovie
             // 
-            this.cbxMovie.FormattingEnabled = true;
-            this.cbxMovie.Location = new System.Drawing.Point(12, 12);
-            this.cbxMovie.Name = "cbxMovie";
-            this.cbxMovie.Size = new System.Drawing.Size(137, 23);
-            this.cbxMovie.TabIndex = 0;
-            this.cbxMovie.SelectedIndexChanged += new System.EventHandler(this.cbxMovie_SelectedIndexChanged);
+            cbxMovie.FormattingEnabled = true;
+            cbxMovie.Location = new Point(12, 12);
+            cbxMovie.Name = "cbxMovie";
+            cbxMovie.Size = new Size(137, 23);
+            cbxMovie.TabIndex = 0;
+            cbxMovie.SelectedIndexChanged += cbxMovie_SelectedIndexChanged;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(155, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 15);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Movies Available to Rent";
+            label1.AutoSize = true;
+            label1.Location = new Point(155, 15);
+            label1.Name = "label1";
+            label1.Size = new Size(137, 15);
+            label1.TabIndex = 1;
+            label1.Text = "Movies Available to Rent";
             // 
             // gbxMovie
             // 
-            this.gbxMovie.Controls.Add(this.label7);
-            this.gbxMovie.Controls.Add(this.btnCancel);
-            this.gbxMovie.Controls.Add(this.btnCheckout);
-            this.gbxMovie.Controls.Add(this.btnAdd);
-            this.gbxMovie.Controls.Add(this.label6);
-            this.gbxMovie.Controls.Add(this.txtbxDesc);
-            this.gbxMovie.Controls.Add(this.pbxPoster);
-            this.gbxMovie.Controls.Add(this.label5);
-            this.gbxMovie.Controls.Add(this.txtbxPrice);
-            this.gbxMovie.Controls.Add(this.label4);
-            this.gbxMovie.Controls.Add(this.txtbxGenre);
-            this.gbxMovie.Controls.Add(this.label3);
-            this.gbxMovie.Controls.Add(this.label2);
-            this.gbxMovie.Controls.Add(this.txtbxRating);
-            this.gbxMovie.Controls.Add(this.txtbxTitle);
-            this.gbxMovie.Location = new System.Drawing.Point(12, 116);
-            this.gbxMovie.Name = "gbxMovie";
-            this.gbxMovie.Size = new System.Drawing.Size(523, 302);
-            this.gbxMovie.TabIndex = 2;
-            this.gbxMovie.TabStop = false;
-            this.gbxMovie.Text = "Movie Details";
+            gbxMovie.Controls.Add(label7);
+            gbxMovie.Controls.Add(btnCancel);
+            gbxMovie.Controls.Add(btnCheckout);
+            gbxMovie.Controls.Add(btnAdd);
+            gbxMovie.Controls.Add(label6);
+            gbxMovie.Controls.Add(txtbxDesc);
+            gbxMovie.Controls.Add(pbxPoster);
+            gbxMovie.Controls.Add(label5);
+            gbxMovie.Controls.Add(txtbxPrice);
+            gbxMovie.Controls.Add(label4);
+            gbxMovie.Controls.Add(txtbxGenre);
+            gbxMovie.Controls.Add(label3);
+            gbxMovie.Controls.Add(label2);
+            gbxMovie.Controls.Add(txtbxRating);
+            gbxMovie.Controls.Add(txtbxTitle);
+            gbxMovie.Location = new Point(12, 116);
+            gbxMovie.Name = "gbxMovie";
+            gbxMovie.Size = new Size(523, 302);
+            gbxMovie.TabIndex = 2;
+            gbxMovie.TabStop = false;
+            gbxMovie.Text = "Movie Details";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(383, 19);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(40, 15);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Poster";
+            label7.AutoSize = true;
+            label7.Location = new Point(383, 19);
+            label7.Name = "label7";
+            label7.Size = new Size(40, 15);
+            label7.TabIndex = 14;
+            label7.Text = "Poster";
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(383, 257);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(134, 36);
-            this.btnCancel.TabIndex = 13;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Location = new Point(383, 257);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(134, 36);
+            btnCancel.TabIndex = 13;
+            btnCancel.Text = "Cancel";
+            btnCancel.UseVisualStyleBackColor = true;
             // 
             // btnCheckout
             // 
-            this.btnCheckout.Location = new System.Drawing.Point(383, 214);
-            this.btnCheckout.Name = "btnCheckout";
-            this.btnCheckout.Size = new System.Drawing.Size(134, 37);
-            this.btnCheckout.TabIndex = 12;
-            this.btnCheckout.Text = "Checkout";
-            this.btnCheckout.UseVisualStyleBackColor = true;
+            btnCheckout.Location = new Point(383, 214);
+            btnCheckout.Name = "btnCheckout";
+            btnCheckout.Size = new Size(134, 37);
+            btnCheckout.TabIndex = 12;
+            btnCheckout.Text = "Checkout";
+            btnCheckout.UseVisualStyleBackColor = true;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(383, 167);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(134, 41);
-            this.btnAdd.TabIndex = 11;
-            this.btnAdd.Text = "Add to Order";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Location = new Point(383, 167);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(134, 41);
+            btnAdd.TabIndex = 11;
+            btnAdd.Text = "Add to Order";
+            btnAdd.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(160, 19);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 15);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Description";
+            label6.AutoSize = true;
+            label6.Location = new Point(160, 19);
+            label6.Name = "label6";
+            label6.Size = new Size(67, 15);
+            label6.TabIndex = 10;
+            label6.Text = "Description";
             // 
             // txtbxDesc
             // 
-            this.txtbxDesc.Enabled = false;
-            this.txtbxDesc.Location = new System.Drawing.Point(160, 37);
-            this.txtbxDesc.Multiline = true;
-            this.txtbxDesc.Name = "txtbxDesc";
-            this.txtbxDesc.Size = new System.Drawing.Size(217, 256);
-            this.txtbxDesc.TabIndex = 9;
+            txtbxDesc.Enabled = false;
+            txtbxDesc.Location = new Point(160, 37);
+            txtbxDesc.Multiline = true;
+            txtbxDesc.Name = "txtbxDesc";
+            txtbxDesc.Size = new Size(217, 256);
+            txtbxDesc.TabIndex = 9;
             // 
             // pbxPoster
             // 
-            this.pbxPoster.Location = new System.Drawing.Point(383, 37);
-            this.pbxPoster.Name = "pbxPoster";
-            this.pbxPoster.Size = new System.Drawing.Size(134, 115);
-            this.pbxPoster.TabIndex = 8;
-            this.pbxPoster.TabStop = false;
+            pbxPoster.Location = new Point(383, 37);
+            pbxPoster.Name = "pbxPoster";
+            pbxPoster.Size = new Size(134, 115);
+            pbxPoster.TabIndex = 8;
+            pbxPoster.TabStop = false;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 243);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 15);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Price";
+            label5.AutoSize = true;
+            label5.Location = new Point(6, 243);
+            label5.Name = "label5";
+            label5.Size = new Size(33, 15);
+            label5.TabIndex = 7;
+            label5.Text = "Price";
             // 
             // txtbxPrice
             // 
-            this.txtbxPrice.Enabled = false;
-            this.txtbxPrice.Location = new System.Drawing.Point(6, 261);
-            this.txtbxPrice.Name = "txtbxPrice";
-            this.txtbxPrice.Size = new System.Drawing.Size(57, 23);
-            this.txtbxPrice.TabIndex = 6;
+            txtbxPrice.Enabled = false;
+            txtbxPrice.Location = new Point(6, 261);
+            txtbxPrice.Name = "txtbxPrice";
+            txtbxPrice.Size = new Size(57, 23);
+            txtbxPrice.TabIndex = 6;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 96);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 15);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Genre";
+            label4.AutoSize = true;
+            label4.Location = new Point(6, 96);
+            label4.Name = "label4";
+            label4.Size = new Size(38, 15);
+            label4.TabIndex = 5;
+            label4.Text = "Genre";
             // 
             // txtbxGenre
             // 
-            this.txtbxGenre.Enabled = false;
-            this.txtbxGenre.Location = new System.Drawing.Point(6, 114);
-            this.txtbxGenre.Name = "txtbxGenre";
-            this.txtbxGenre.Size = new System.Drawing.Size(131, 23);
-            this.txtbxGenre.TabIndex = 4;
+            txtbxGenre.Enabled = false;
+            txtbxGenre.Location = new Point(6, 114);
+            txtbxGenre.Name = "txtbxGenre";
+            txtbxGenre.Size = new Size(131, 23);
+            txtbxGenre.TabIndex = 4;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 167);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 15);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Rating";
+            label3.AutoSize = true;
+            label3.Location = new Point(6, 167);
+            label3.Name = "label3";
+            label3.Size = new Size(41, 15);
+            label3.TabIndex = 3;
+            label3.Text = "Rating";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 15);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Title";
+            label2.AutoSize = true;
+            label2.Location = new Point(6, 19);
+            label2.Name = "label2";
+            label2.Size = new Size(29, 15);
+            label2.TabIndex = 2;
+            label2.Text = "Title";
             // 
             // txtbxRating
             // 
-            this.txtbxRating.Enabled = false;
-            this.txtbxRating.Location = new System.Drawing.Point(6, 185);
-            this.txtbxRating.Name = "txtbxRating";
-            this.txtbxRating.Size = new System.Drawing.Size(57, 23);
-            this.txtbxRating.TabIndex = 1;
+            txtbxRating.Enabled = false;
+            txtbxRating.Location = new Point(6, 185);
+            txtbxRating.Name = "txtbxRating";
+            txtbxRating.Size = new Size(57, 23);
+            txtbxRating.TabIndex = 1;
             // 
             // txtbxTitle
             // 
-            this.txtbxTitle.Enabled = false;
-            this.txtbxTitle.Location = new System.Drawing.Point(6, 37);
-            this.txtbxTitle.Name = "txtbxTitle";
-            this.txtbxTitle.Size = new System.Drawing.Size(131, 23);
-            this.txtbxTitle.TabIndex = 0;
+            txtbxTitle.Enabled = false;
+            txtbxTitle.Location = new Point(6, 37);
+            txtbxTitle.Name = "txtbxTitle";
+            txtbxTitle.Size = new Size(131, 23);
+            txtbxTitle.TabIndex = 0;
             // 
             // FormRentalForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(544, 426);
-            this.Controls.Add(this.gbxMovie);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.cbxMovie);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "FormRentalForm";
-            this.Text = "RentalForm";
-            this.gbxMovie.ResumeLayout(false);
-            this.gbxMovie.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxPoster)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(544, 426);
+            Controls.Add(gbxMovie);
+            Controls.Add(label1);
+            Controls.Add(cbxMovie);
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "FormRentalForm";
+            Text = "RentalForm";
+            Load += FormRentalForm_Load;
+            gbxMovie.ResumeLayout(false);
+            gbxMovie.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pbxPoster).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -256,6 +261,6 @@
         private Button btnCancel;
         private Button btnCheckout;
         private Button btnAdd;
-        
+
     }
 }
