@@ -17,7 +17,7 @@ namespace BoxBreakerVideo
         {
             InitializeComponent();
         }
-
+        private decimal total;
         private void cbxMovie_SelectedIndexChanged(object sender, EventArgs e)
         {
             //Connect to DB
@@ -64,7 +64,8 @@ namespace BoxBreakerVideo
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            decimal total = 0;
+            
+            
             //Connect to DB
             BoxBreakerVideoContext connection = new BoxBreakerVideoContext();
 
@@ -74,14 +75,19 @@ namespace BoxBreakerVideo
             string selectedTitle = cbxMovie.SelectedItem.ToString();
             Movie selectedMovie = connection.Movies.FirstOrDefault(movie => movie.Title == selectedTitle);
 
+            
+            decimal currentTotal = (decimal)selectedMovie.MoviePrice;
+
             //Populate the listView with current order
             lstViewOrder.Items.Add(selectedMovie.Title + ", " + selectedMovie.MoviePrice);
-            txtbxTotal.Text = Convert.ToString(selectedMovie.MoviePrice + total);
+            total += currentTotal;
+            txtbxTotal.Text = Convert.ToString(total);
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
             lstViewOrder.Items.Clear();
+            total = 0;
             txtbxTotal.Clear();
         }
 
