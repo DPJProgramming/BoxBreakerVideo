@@ -32,13 +32,13 @@ INSERT INTO Movie (MovieId, Title, Genre, MovieDescription, MovieRuntime, Releas
             MaturityRating, MoviePoster, MoviePrice)
 VALUES(1, 'The Matrix', 'Sci-Fi', 'Directed by The Wachowskis. Starring Keanu Reeves, Carrie Ann Moss. 
         Some guy finds out he lives in a computer generated simulation operated by artificially intellegent machines',
-        '136 Min', '1999-09-09', 'R', 'https://www.allposters.com/-sp/The-Matrix-Posters_i8032466_.htm?sOrigID=798&upi=F4S5W20', $5.99)
+        '136 Min', '1999-09-09', 'R', 'https://imgc.allpostersimages.com/img/posters/the-matrix_u-L-F4S5W20.jpg?artHeight=900&artPerspective=n&artWidth=900&background=fbfbfb', $5.99)
 
 INSERT INTO Movie (MovieId, Title, Genre, MovieDescription, MovieRuntime, ReleaseDate, 
             MaturityRating, MoviePoster,MoviePrice)
 VALUES (2, 'Star Wars', 'Sci-Fi', 'Directed by George Lucas. Starring Mark Hamill, Carrie Fisher. 
         A space epic following a small group of rebels battling a sinister Empire', 
-        '121 Min', '1977-05-04', 'PG', 'https://www.allposters.com/-sp/The-Matrix-Posters_i8032466_.htm?sOrigID=798&upi=F4S5W20', $4.99)
+        '121 Min', '1977-05-04', 'PG', 'https://imgc.allpostersimages.com/img/posters/star-wars-episode-iv-new-hope-classic-movie-poster_u-L-F5L5V30.jpg?artHeight=900&artPerspective=n&artWidth=900&background=fbfbfb', $4.99)
 
 SET IDENTITY_INSERT Movie OFF
 
