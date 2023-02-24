@@ -39,5 +39,10 @@ namespace BoxBreakerVideo {
             NewMemberForm newMember = new NewMemberForm();
             newMember.ShowDialog();
         }
+
+        private void btnAdminLogin_Click(object sender, EventArgs e) {
+            AdminAccessForm AdminForm = new AdminAccessForm();
+            AdminForm.ShowDialog();
+        }
     }
 }
