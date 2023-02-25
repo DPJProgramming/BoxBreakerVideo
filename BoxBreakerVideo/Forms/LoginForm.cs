@@ -1,3 +1,4 @@
+using BoxBreakerVideo.Forms;
 using BoxBreakerVideo.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -38,6 +39,11 @@ namespace BoxBreakerVideo {
         private void btnNewUser_Click(object sender, EventArgs e) {
             NewMemberForm newMember = new NewMemberForm();
             newMember.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e) {
+            AdminForm admin = new AdminForm();
+            admin.ShowDialog();
         }
     }
 }
