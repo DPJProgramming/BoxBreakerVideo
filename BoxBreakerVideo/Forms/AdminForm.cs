@@ -46,5 +46,23 @@ namespace BoxBreakerVideo.Forms {
 
 
         }
+
+        private void button2_Click(object sender, EventArgs e) {
+            //make new connection to database
+            BoxBreakerVideoContext database = new BoxBreakerVideoContext();
+
+            //make a member object from the database row that matches the text box input. If there is a match, delete that member
+            //if not, show an error
+            try {
+                Member memberToDelete = database.Members.Where(member => member.MemberEmail == txtbxDeleteMember.Text).First();
+                database.Remove(memberToDelete);
+                MessageBox.Show($"{txtbxDeleteMember.Text} Deleted Succesfully");
+                database.SaveChanges();
+                txtbxDeleteMember.Clear();
+            }
+            catch {
+                MessageBox.Show("Member Does Not Exist");
+            }
+        }
     }
 }
