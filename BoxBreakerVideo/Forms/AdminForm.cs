@@ -64,5 +64,10 @@ namespace BoxBreakerVideo.Forms {
                 MessageBox.Show("Member Does Not Exist");
             }
         }
+
+        private void button3_Click(object sender, EventArgs e) {
+            AddMovieForm addMovie = new AddMovieForm();
+            addMovie.ShowDialog();
+        }
     }
 }
