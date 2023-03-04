@@ -1,5 +1,5 @@
 ﻿namespace BoxBreakerVideo.Forms {
-    partial class AddMovie {
+    partial class AddMovieForm {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -34,12 +34,12 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtbxTitle = new System.Windows.Forms.TextBox();
             this.cmbbxGenre = new System.Windows.Forms.ComboBox();
-            this.grpBxDescription = new System.Windows.Forms.GroupBox();
             this.txtbxRuntime = new System.Windows.Forms.TextBox();
             this.cmbbxMaturityRating = new System.Windows.Forms.ComboBox();
             this.datebxReleaseDate = new System.Windows.Forms.DateTimePicker();
             this.txtbxMoviePoster = new System.Windows.Forms.TextBox();
             this.txtbxPrice = new System.Windows.Forms.TextBox();
+            this.txtbxDescription = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -138,15 +138,6 @@
             this.cmbbxGenre.Size = new System.Drawing.Size(151, 28);
             this.cmbbxGenre.TabIndex = 10;
             // 
-            // grpBxDescription
-            // 
-            this.grpBxDescription.Location = new System.Drawing.Point(20, 225);
-            this.grpBxDescription.Name = "grpBxDescription";
-            this.grpBxDescription.Size = new System.Drawing.Size(311, 195);
-            this.grpBxDescription.TabIndex = 11;
-            this.grpBxDescription.TabStop = false;
-            this.grpBxDescription.Text = "groupBox1";
-            // 
             // txtbxRuntime
             // 
             this.txtbxRuntime.Location = new System.Drawing.Point(464, 63);
@@ -183,17 +174,26 @@
             this.txtbxPrice.Size = new System.Drawing.Size(125, 27);
             this.txtbxPrice.TabIndex = 16;
             // 
-            // AddMovie
+            // txtbxDescription
+            // 
+            this.txtbxDescription.Location = new System.Drawing.Point(20, 223);
+            this.txtbxDescription.Multiline = true;
+            this.txtbxDescription.Name = "txtbxDescription";
+            this.txtbxDescription.Size = new System.Drawing.Size(311, 195);
+            this.txtbxDescription.TabIndex = 17;
+            this.txtbxDescription.Text = "Directed By: \r\nStarring:";
+            // 
+            // AddMovieForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(698, 450);
+            this.Controls.Add(this.txtbxDescription);
             this.Controls.Add(this.txtbxPrice);
             this.Controls.Add(this.txtbxMoviePoster);
             this.Controls.Add(this.datebxReleaseDate);
             this.Controls.Add(this.cmbbxMaturityRating);
             this.Controls.Add(this.txtbxRuntime);
-            this.Controls.Add(this.grpBxDescription);
             this.Controls.Add(this.cmbbxGenre);
             this.Controls.Add(this.txtbxTitle);
             this.Controls.Add(this.label9);
@@ -205,7 +205,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "AddMovie";
+            this.Name = "AddMovieForm";
             this.Text = "Add Movie";
             this.Load += new System.EventHandler(this.AddMovie_Load);
             this.ResumeLayout(false);
@@ -226,11 +226,11 @@
         private Label label9;
         private TextBox txtbxTitle;
         private ComboBox cmbbxGenre;
-        private GroupBox grpBxDescription;
         private TextBox txtbxRuntime;
         private ComboBox cmbbxMaturityRating;
         private DateTimePicker datebxReleaseDate;
         private TextBox txtbxMoviePoster;
         private TextBox txtbxPrice;
+        private TextBox txtbxDescription;
     }
 }
