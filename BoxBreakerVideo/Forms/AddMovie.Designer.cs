@@ -56,7 +56,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 66);
+            this.label2.Location = new System.Drawing.Point(20, 66);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 20);
             this.label2.TabIndex = 1;
@@ -65,7 +65,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(36, 135);
+            this.label3.Location = new System.Drawing.Point(20, 135);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 20);
             this.label3.TabIndex = 2;
@@ -76,9 +76,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(20, 189);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(311, 20);
+            this.label4.Size = new System.Drawing.Size(89, 20);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Description (include Main Actor and Director)";
+            this.label4.Text = "Description ";
             // 
             // label5
             // 
@@ -127,7 +127,7 @@
             // 
             // txtbxTitle
             // 
-            this.txtbxTitle.Location = new System.Drawing.Point(99, 65);
+            this.txtbxTitle.Location = new System.Drawing.Point(83, 65);
             this.txtbxTitle.Name = "txtbxTitle";
             this.txtbxTitle.Size = new System.Drawing.Size(125, 27);
             this.txtbxTitle.TabIndex = 9;
@@ -135,7 +135,7 @@
             // cmbbxGenre
             // 
             this.cmbbxGenre.FormattingEnabled = true;
-            this.cmbbxGenre.Location = new System.Drawing.Point(99, 127);
+            this.cmbbxGenre.Location = new System.Drawing.Point(83, 127);
             this.cmbbxGenre.Name = "cmbbxGenre";
             this.cmbbxGenre.Size = new System.Drawing.Size(151, 28);
             this.cmbbxGenre.TabIndex = 10;
