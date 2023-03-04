@@ -36,10 +36,12 @@
             this.cmbbxGenre = new System.Windows.Forms.ComboBox();
             this.txtbxRuntime = new System.Windows.Forms.TextBox();
             this.cmbbxMaturityRating = new System.Windows.Forms.ComboBox();
-            this.datebxReleaseDate = new System.Windows.Forms.DateTimePicker();
             this.txtbxMoviePoster = new System.Windows.Forms.TextBox();
             this.txtbxPrice = new System.Windows.Forms.TextBox();
             this.txtbxDescription = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.datebxReleaseDate = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -83,9 +85,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(384, 66);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 20);
+            this.label5.Size = new System.Drawing.Size(153, 20);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Runtime";
+            this.label5.Text = "Runtime (ex. 120 min)";
             // 
             // label6
             // 
@@ -140,7 +142,7 @@
             // 
             // txtbxRuntime
             // 
-            this.txtbxRuntime.Location = new System.Drawing.Point(464, 63);
+            this.txtbxRuntime.Location = new System.Drawing.Point(544, 63);
             this.txtbxRuntime.Name = "txtbxRuntime";
             this.txtbxRuntime.Size = new System.Drawing.Size(125, 27);
             this.txtbxRuntime.TabIndex = 12;
@@ -152,13 +154,6 @@
             this.cmbbxMaturityRating.Name = "cmbbxMaturityRating";
             this.cmbbxMaturityRating.Size = new System.Drawing.Size(151, 28);
             this.cmbbxMaturityRating.TabIndex = 13;
-            // 
-            // datebxReleaseDate
-            // 
-            this.datebxReleaseDate.Location = new System.Drawing.Point(399, 272);
-            this.datebxReleaseDate.Name = "datebxReleaseDate";
-            this.datebxReleaseDate.Size = new System.Drawing.Size(250, 27);
-            this.datebxReleaseDate.TabIndex = 14;
             // 
             // txtbxMoviePoster
             // 
@@ -183,15 +178,44 @@
             this.txtbxDescription.TabIndex = 17;
             this.txtbxDescription.Text = "Directed By: \r\nStarring:";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(20, 469);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(295, 52);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Confirm Add Movie";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(374, 469);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(295, 52);
+            this.button2.TabIndex = 19;
+            this.button2.Text = "Cancel";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // datebxReleaseDate
+            // 
+            this.datebxReleaseDate.Location = new System.Drawing.Point(384, 269);
+            this.datebxReleaseDate.Name = "datebxReleaseDate";
+            this.datebxReleaseDate.Size = new System.Drawing.Size(250, 27);
+            this.datebxReleaseDate.TabIndex = 20;
+            // 
             // AddMovieForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(698, 450);
+            this.ClientSize = new System.Drawing.Size(698, 583);
+            this.Controls.Add(this.datebxReleaseDate);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtbxDescription);
             this.Controls.Add(this.txtbxPrice);
             this.Controls.Add(this.txtbxMoviePoster);
-            this.Controls.Add(this.datebxReleaseDate);
             this.Controls.Add(this.cmbbxMaturityRating);
             this.Controls.Add(this.txtbxRuntime);
             this.Controls.Add(this.cmbbxGenre);
@@ -228,9 +252,11 @@
         private ComboBox cmbbxGenre;
         private TextBox txtbxRuntime;
         private ComboBox cmbbxMaturityRating;
-        private DateTimePicker datebxReleaseDate;
         private TextBox txtbxMoviePoster;
         private TextBox txtbxPrice;
         private TextBox txtbxDescription;
+        private Button button1;
+        private Button button2;
+        private DateTimePicker datebxReleaseDate;
     }
 }
