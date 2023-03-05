@@ -40,6 +40,24 @@ VALUES (2, 'Star Wars', 'Sci-Fi', 'Directed by George Lucas. Starring Mark Hamil
         A space epic following a small group of rebels battling a sinister Empire', 
         '121 Min', '1977-05-04', 'PG', 'https://imgc.allpostersimages.com/img/posters/star-wars-episode-iv-new-hope-classic-movie-poster_u-L-F5L5V30.jpg?artHeight=900&artPerspective=n&artWidth=900&background=fbfbfb', $4.99)
 
+INSERT INTO Movie (MovieId, Title, Genre, MovieDescription, MovieRuntime, ReleaseDate, 
+            MaturityRating, MoviePoster,MoviePrice)
+VALUES (3, 'Alien', 'Horror', 'Directed by: Ridley Scott. Starring: Sigourney Weaver. 
+        The crew of a commercial spacecraft encounter a deadly lifeform after investigating an unknown transmission.', 
+        '117 Min', '1979-05-25', 'R', 'https://imgc.allpostersimages.com/img/posters/alien_u-L-F4S8OE0.jpg?artHeight=900&artPerspective=n&artWidth=900&background=fbfbfb', $4.99)
+
+INSERT INTO Movie (MovieId, Title, Genre, MovieDescription, MovieRuntime, ReleaseDate, 
+            MaturityRating, MoviePoster,MoviePrice)
+VALUES (4, 'Saving Private Ryan', 'Drama', 'Directed by: Steven Spielberg. Starring: Tom Hanks. 
+        Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.', 
+        '2H 49Min', '1998-07-21', 'R', 'https://imgc.allpostersimages.com/img/posters/saving-private-ryan_u-L-F4S6K30.jpg?artHeight=900&artPerspective=n&artWidth=900&background=fbfbfb', $5.99)
+
+INSERT INTO Movie (MovieId, Title, Genre, MovieDescription, MovieRuntime, ReleaseDate, 
+            MaturityRating, MoviePoster,MoviePrice)
+VALUES (5, 'Happy Gilmore', 'Comedy', 'Directed by: Dennis Dugan. Starring: Adam Sandler. 
+        Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.', 
+        '1H 32Min', '1996-02-07', 'PG-13', 'https://imgc.allpostersimages.com/img/posters/happy-gilmore_u-L-F4S6KC0.jpg?artHeight=900&artPerspective=n&artWidth=900&background=fbfbfb', $3.99)
+
 SET IDENTITY_INSERT Movie OFF
 
 
@@ -59,7 +77,8 @@ SET IDENTITY_INSERT Members ON
 
 INSERT INTO Members (MemberId, MemberFName, MemberLName, MemberEmail, MemberPhone, MemberAddress, MemberPassword)
 VALUES (1000,'John', 'Snow', 'jccomini1@mayoclinic.com', '278-825-7929', '21 Lunder Park San Diego, Ca 83838', '1OIgV2vkQtl'),
-        (2000,'Kevin', 'Bacon', 'sclaibourn6@infoseek.co.jp', '146-760-1550', '4194 Pearson Pass Seattle, Wa 98473', 'bKwM2xk42W')
+        (2000,'Kevin', 'Bacon', 'sclaibourn6@infoseek.co.jp', '146-760-1550', '4194 Pearson Pass Seattle, Wa 98473', 'bKwM2xk42W'),
+        (3000, 'test', 'test', 'test@test.com', '111-111-1111', '1111 se test ave test Wa 11111', 'test')
 
 SET IDENTITY_INSERT Members OFF
 
