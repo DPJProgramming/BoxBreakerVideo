@@ -192,6 +192,7 @@
             btnConfirm.TabIndex = 16;
             btnConfirm.Text = "Confirm Edit";
             btnConfirm.UseVisualStyleBackColor = true;
+            btnConfirm.Click += btnConfirm_Click;
             // 
             // btnCancel
             // 
@@ -201,6 +202,7 @@
             btnCancel.TabIndex = 17;
             btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Click += btnCancel_Click;
             // 
             // cbxGenre
             // 
@@ -209,6 +211,7 @@
             cbxGenre.Name = "cbxGenre";
             cbxGenre.Size = new Size(144, 23);
             cbxGenre.TabIndex = 18;
+            cbxGenre.SelectedIndexChanged += cbxGenre_SelectedIndexChanged;
             // 
             // cbxMaturityRating
             // 
@@ -217,6 +220,7 @@
             cbxMaturityRating.Name = "cbxMaturityRating";
             cbxMaturityRating.Size = new Size(121, 23);
             cbxMaturityRating.TabIndex = 19;
+            cbxMaturityRating.SelectedIndexChanged += cbxMaturityRating_SelectedIndexChanged;
             // 
             // EditMovie
             // 
