@@ -75,13 +75,31 @@ namespace BoxBreakerVideo
             string selectedTitle = cbxMovie.SelectedItem.ToString();
             Movie selectedMovie = connection.Movies.FirstOrDefault(movie => movie.Title == selectedTitle);
 
-            
-            decimal currentTotal = (decimal)selectedMovie.MoviePrice;
+            //Check if movie is already in order
+            bool doesMovieExist = false;
+            foreach(ListViewItem item in lstViewOrder.Items) 
+            {
+                if(item.Text.Contains(selectedMovie.Title)) 
+                {
+                    doesMovieExist = true;
+                    break;
+                }
+            }
 
-            //Populate the listView with current order
-            lstViewOrder.Items.Add(selectedMovie.Title + ", " + selectedMovie.MoviePrice);
-            total += currentTotal;
-            txtbxTotal.Text = Convert.ToString(total);
+            if(!doesMovieExist) 
+            {
+                decimal currentTotal = (decimal)selectedMovie.MoviePrice;
+
+                //Populate the listView with current order
+                lstViewOrder.Items.Add(selectedMovie.Title + ", " + selectedMovie.MoviePrice);
+                total += currentTotal;
+                txtbxTotal.Text = Convert.ToString(total);
+            }
+            else
+            {
+                MessageBox.Show("Movie is already in the order.");
+            }
+            
         }
 
         private void btnClear_Click(object sender, EventArgs e)
