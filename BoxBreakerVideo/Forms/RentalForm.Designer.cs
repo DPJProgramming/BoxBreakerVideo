@@ -31,6 +31,8 @@
             cbxMovie = new ComboBox();
             label1 = new Label();
             gbxMovie = new GroupBox();
+            txtbxRunTime = new TextBox();
+            label9 = new Label();
             label7 = new Label();
             btnCancel = new Button();
             btnCheckout = new Button();
@@ -50,8 +52,6 @@
             label8 = new Label();
             txtbxTotal = new TextBox();
             btnClear = new Button();
-            label9 = new Label();
-            txtbxRunTime = new TextBox();
             gbxMovie.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbxPoster).BeginInit();
             SuspendLayout();
@@ -100,6 +100,23 @@
             gbxMovie.TabStop = false;
             gbxMovie.Text = "Movie Details";
             // 
+            // txtbxRunTime
+            // 
+            txtbxRunTime.Enabled = false;
+            txtbxRunTime.Location = new Point(160, 261);
+            txtbxRunTime.Name = "txtbxRunTime";
+            txtbxRunTime.Size = new Size(67, 23);
+            txtbxRunTime.TabIndex = 16;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(160, 243);
+            label9.Name = "label9";
+            label9.Size = new Size(57, 15);
+            label9.TabIndex = 15;
+            label9.Text = "Run Time";
+            // 
             // label7
             // 
             label7.AutoSize = true;
@@ -127,6 +144,7 @@
             btnCheckout.TabIndex = 12;
             btnCheckout.Text = "Checkout";
             btnCheckout.UseVisualStyleBackColor = true;
+            btnCheckout.Click += btnCheckout_Click;
             // 
             // btnAdd
             // 
@@ -267,23 +285,6 @@
             btnClear.Text = "Clear Order";
             btnClear.UseVisualStyleBackColor = true;
             btnClear.Click += btnClear_Click;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Location = new Point(160, 243);
-            label9.Name = "label9";
-            label9.Size = new Size(57, 15);
-            label9.TabIndex = 15;
-            label9.Text = "Run Time";
-            // 
-            // txtbxRunTime
-            // 
-            txtbxRunTime.Enabled = false;
-            txtbxRunTime.Location = new Point(160, 261);
-            txtbxRunTime.Name = "txtbxRunTime";
-            txtbxRunTime.Size = new Size(67, 23);
-            txtbxRunTime.TabIndex = 16;
             // 
             // FormRentalForm
             // 
