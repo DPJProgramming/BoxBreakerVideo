@@ -22,8 +22,15 @@ namespace BoxBreakerVideo {
             BoxBreakerVideoContext database = new BoxBreakerVideoContext();
 
             //if credentials are valid based on Where query, open rental form
-            if (database.Members.Where(data => data.MemberEmail == txtbxEmail.Text && data.MemberPassword == txtbxPassword.Text).Any()) {
-                FormRentalForm newRental = new FormRentalForm();
+            if (database.Members.Where(data => data.MemberEmail == txtbxEmail.Text && data.MemberPassword == txtbxPassword.Text).Any())
+            {
+                //Retrieve logged-in members data
+                Member loggedInMember = database.Members.FirstOrDefault(data => data.MemberEmail == txtbxEmail.Text && data.MemberPassword == txtbxPassword.Text);
+
+                //Store member's full name in variable
+                string memberFullName = $"{loggedInMember.MemberFname} {loggedInMember.MemberLname}";
+
+                FormRentalForm newRental = new FormRentalForm(memberFullName, loggedInMember.MemberId);
                 newRental.ShowDialog();
             }
             //otherwise failed login window pops up

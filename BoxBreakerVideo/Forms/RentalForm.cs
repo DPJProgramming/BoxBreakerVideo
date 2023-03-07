@@ -1,4 +1,5 @@
-﻿using BoxBreakerVideo.Models;
+﻿using BoxBreakerVideo.Forms;
+using BoxBreakerVideo.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,16 @@ namespace BoxBreakerVideo
 {
     public partial class FormRentalForm : Form
     {
-        public FormRentalForm()
+        private string memberFullName;
+        private List<string> moviesRented;
+        private int memberId;
+
+        public FormRentalForm(string memberFullName, int memberId)
         {
             InitializeComponent();
+            this.memberId = memberId;
+            this.memberFullName = memberFullName;
+            moviesRented = new List<string>();
         }
         private decimal total;
         private void cbxMovie_SelectedIndexChanged(object sender, EventArgs e)
@@ -93,8 +101,10 @@ namespace BoxBreakerVideo
 
                 //Populate the listView with current order
                 lstViewOrder.Items.Add(selectedMovie.Title + ", " + selectedMovie.MoviePrice);
+                moviesRented.Add(selectedMovie.Title + ", " + selectedMovie.MoviePrice);
                 total += currentTotal;
                 txtbxTotal.Text = Convert.ToString(total);
+                
             }
             else
             {
@@ -112,6 +122,13 @@ namespace BoxBreakerVideo
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnCheckout_Click(object sender, EventArgs e)
+        {
+            //Open Summary form and pass fullname in as parameter
+            OrderSummaryForm orderSummaryForm = new OrderSummaryForm(memberFullName, moviesRented,memberId);
+            orderSummaryForm.ShowDialog();
         }
     }
 }
