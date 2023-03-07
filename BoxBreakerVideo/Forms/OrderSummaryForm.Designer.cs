@@ -124,6 +124,7 @@
             // 
             // dtpDO
             // 
+            dtpDO.Enabled = false;
             dtpDO.Location = new Point(103, 333);
             dtpDO.Name = "dtpDO";
             dtpDO.Size = new Size(200, 23);
@@ -131,6 +132,7 @@
             // 
             // dtpDR
             // 
+            dtpDR.Enabled = false;
             dtpDR.Location = new Point(103, 366);
             dtpDR.Name = "dtpDR";
             dtpDR.Size = new Size(200, 23);
