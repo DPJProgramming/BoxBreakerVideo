@@ -1,5 +1,7 @@
-﻿namespace BoxBreakerVideo.Forms {
-    partial class AdminForm {
+﻿namespace BoxBreakerVideo.Forms
+{
+    partial class AdminForm
+    {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -9,8 +11,10 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing) {
-            if (disposing && (components != null)) {
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -22,141 +26,150 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent() {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtbxDeleteMovie = new System.Windows.Forms.TextBox();
-            this.txtbxDeleteMember = new System.Windows.Forms.TextBox();
-            this.SuspendLayout();
+        private void InitializeComponent()
+        {
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
+            button4 = new Button();
+            button5 = new Button();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            txtbxDeleteMovie = new TextBox();
+            txtbxDeleteMember = new TextBox();
+            SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(578, 67);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 50);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Delete Movie";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.Location = new Point(506, 50);
+            button1.Margin = new Padding(3, 2, 3, 2);
+            button1.Name = "button1";
+            button1.Size = new Size(123, 38);
+            button1.TabIndex = 0;
+            button1.Text = "Delete Movie";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(578, 132);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(141, 50);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Remove Member";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            button2.Location = new Point(506, 99);
+            button2.Margin = new Padding(3, 2, 3, 2);
+            button2.Name = "button2";
+            button2.Size = new Size(123, 38);
+            button2.TabIndex = 1;
+            button2.Text = "Remove Member";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(124, 275);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(180, 78);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Add Movie";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            button3.Location = new Point(108, 206);
+            button3.Margin = new Padding(3, 2, 3, 2);
+            button3.Name = "button3";
+            button3.Size = new Size(158, 58);
+            button3.TabIndex = 2;
+            button3.Text = "Add Movie";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(429, 275);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(180, 78);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Edit Movie";
-            this.button4.UseVisualStyleBackColor = true;
+            button4.Location = new Point(375, 206);
+            button4.Margin = new Padding(3, 2, 3, 2);
+            button4.Name = "button4";
+            button4.Size = new Size(158, 58);
+            button4.TabIndex = 3;
+            button4.Text = "Edit Movie";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(275, 383);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(180, 78);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Cancel";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            button5.Location = new Point(241, 287);
+            button5.Margin = new Padding(3, 2, 3, 2);
+            button5.Name = "button5";
+            button5.Size = new Size(158, 58);
+            button5.TabIndex = 4;
+            button5.Text = "Cancel";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(63, 86);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(206, 20);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Remove Movie By Movie Title";
+            label1.AutoSize = true;
+            label1.Location = new Point(55, 64);
+            label1.Name = "label1";
+            label1.Size = new Size(163, 15);
+            label1.TabIndex = 5;
+            label1.Text = "Remove Movie By Movie Title";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(63, 147);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(241, 20);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Remove Member By Email Address";
+            label2.AutoSize = true;
+            label2.Location = new Point(55, 110);
+            label2.Name = "label2";
+            label2.Size = new Size(191, 15);
+            label2.TabIndex = 6;
+            label2.Text = "Remove Member By Email Address";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(292, 232);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(153, 40);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "              Or\r\n------------------------";
+            label3.AutoSize = true;
+            label3.Location = new Point(256, 174);
+            label3.Name = "label3";
+            label3.Size = new Size(127, 30);
+            label3.TabIndex = 7;
+            label3.Text = "              Or\r\n------------------------";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(275, 20);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(195, 40);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Remove Movie or Member\r\n-------------------------------\r\n";
+            label4.AutoSize = true;
+            label4.Location = new Point(241, 15);
+            label4.Name = "label4";
+            label4.Size = new Size(162, 30);
+            label4.TabIndex = 8;
+            label4.Text = "Remove Movie or Member\r\n-------------------------------\r\n";
             // 
             // txtbxDeleteMovie
             // 
-            this.txtbxDeleteMovie.Location = new System.Drawing.Point(310, 83);
-            this.txtbxDeleteMovie.Name = "txtbxDeleteMovie";
-            this.txtbxDeleteMovie.Size = new System.Drawing.Size(239, 27);
-            this.txtbxDeleteMovie.TabIndex = 9;
+            txtbxDeleteMovie.Location = new Point(271, 62);
+            txtbxDeleteMovie.Margin = new Padding(3, 2, 3, 2);
+            txtbxDeleteMovie.Name = "txtbxDeleteMovie";
+            txtbxDeleteMovie.Size = new Size(210, 23);
+            txtbxDeleteMovie.TabIndex = 9;
             // 
             // txtbxDeleteMember
             // 
-            this.txtbxDeleteMember.Location = new System.Drawing.Point(310, 144);
-            this.txtbxDeleteMember.Name = "txtbxDeleteMember";
-            this.txtbxDeleteMember.Size = new System.Drawing.Size(239, 27);
-            this.txtbxDeleteMember.TabIndex = 10;
+            txtbxDeleteMember.Location = new Point(271, 108);
+            txtbxDeleteMember.Margin = new Padding(3, 2, 3, 2);
+            txtbxDeleteMember.Name = "txtbxDeleteMember";
+            txtbxDeleteMember.Size = new Size(210, 23);
+            txtbxDeleteMember.TabIndex = 10;
             // 
             // AdminForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 489);
-            this.Controls.Add(this.txtbxDeleteMember);
-            this.Controls.Add(this.txtbxDeleteMovie);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Name = "AdminForm";
-            this.Text = "Administrator Access";
-            this.Load += new System.EventHandler(this.AdminForm_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(700, 367);
+            Controls.Add(txtbxDeleteMember);
+            Controls.Add(txtbxDeleteMovie);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(button5);
+            Controls.Add(button4);
+            Controls.Add(button3);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "AdminForm";
+            Text = "Administrator Access";
+            Load += AdminForm_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

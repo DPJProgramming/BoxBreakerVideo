@@ -57,6 +57,7 @@
             cbxMovie.Name = "cbxMovie";
             cbxMovie.Size = new Size(156, 23);
             cbxMovie.TabIndex = 0;
+            cbxMovie.SelectedIndexChanged += cbxMovie_SelectedIndexChanged;
             // 
             // label1
             // 
