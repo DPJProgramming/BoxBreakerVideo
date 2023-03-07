@@ -50,6 +50,8 @@
             label8 = new Label();
             txtbxTotal = new TextBox();
             btnClear = new Button();
+            label9 = new Label();
+            txtbxRunTime = new TextBox();
             gbxMovie.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbxPoster).BeginInit();
             SuspendLayout();
@@ -74,6 +76,8 @@
             // 
             // gbxMovie
             // 
+            gbxMovie.Controls.Add(txtbxRunTime);
+            gbxMovie.Controls.Add(label9);
             gbxMovie.Controls.Add(label7);
             gbxMovie.Controls.Add(btnCancel);
             gbxMovie.Controls.Add(btnCheckout);
@@ -149,7 +153,7 @@
             txtbxDesc.Location = new Point(160, 37);
             txtbxDesc.Multiline = true;
             txtbxDesc.Name = "txtbxDesc";
-            txtbxDesc.Size = new Size(217, 256);
+            txtbxDesc.Size = new Size(217, 171);
             txtbxDesc.TabIndex = 9;
             // 
             // pbxPoster
@@ -264,6 +268,23 @@
             btnClear.UseVisualStyleBackColor = true;
             btnClear.Click += btnClear_Click;
             // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(160, 243);
+            label9.Name = "label9";
+            label9.Size = new Size(57, 15);
+            label9.TabIndex = 15;
+            label9.Text = "Run Time";
+            // 
+            // txtbxRunTime
+            // 
+            txtbxRunTime.Enabled = false;
+            txtbxRunTime.Location = new Point(160, 261);
+            txtbxRunTime.Name = "txtbxRunTime";
+            txtbxRunTime.Size = new Size(67, 23);
+            txtbxRunTime.TabIndex = 16;
+            // 
             // FormRentalForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -311,5 +332,7 @@
         private Label label8;
         private TextBox txtbxTotal;
         private Button btnClear;
+        private TextBox txtbxRunTime;
+        private Label label9;
     }
 }

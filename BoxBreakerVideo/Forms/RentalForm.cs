@@ -35,6 +35,7 @@ namespace BoxBreakerVideo
             txtbxRating.Text = selectedMovie.MaturityRating;
             txtbxPrice.Text = Convert.ToString(selectedMovie.MoviePrice);
             txtbxDesc.Text = selectedMovie.MovieDescription;
+            txtbxRunTime.Text = selectedMovie.MovieRuntime;
             pbxPoster.ImageLocation = selectedMovie.MoviePoster;
 
         }
@@ -64,8 +65,8 @@ namespace BoxBreakerVideo
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            
-            
+
+
             //Connect to DB
             BoxBreakerVideoContext connection = new BoxBreakerVideoContext();
 
