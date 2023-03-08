@@ -49,8 +49,13 @@ namespace BoxBreakerVideo {
         }
 
         private void button1_Click(object sender, EventArgs e) {
-            AdminForm admin = new AdminForm();
-            admin.ShowDialog();
+            if (txtbxEmail.Text.Contains("test.com")) {
+                AdminForm admin = new AdminForm();
+                admin.ShowDialog();
+            }
+            else {
+                MessageBox.Show("Access Denied");
+            }
         }
     }
 }
