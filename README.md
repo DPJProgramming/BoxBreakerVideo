@@ -58,5 +58,5 @@ The database will now be on your computer.
 2.From the Admin form you can delete members and movies by title.
 ![alt text](BoxBreakerVideo/Box Breaker Video pics/adminDelete.png "Admin Form")
 
-3.From the admin form you can also click the add movie button to enter information for a new movie to be added
+3.From the admin form you can also click the add movie button to enter information for a new movie to be added,
 or click the edit button to edit the information of a movie which already exists in the database.
