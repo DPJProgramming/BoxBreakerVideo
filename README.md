@@ -23,12 +23,16 @@ A movie rental app using Windows Forms .NET
 ## Instructions
 - ### Install Database
 1. Clone Repository to your local drive.
-[Connect](Box Breaker Video pics/connect.png)
+
+![Connect](BoxBreakerVideo/BoxBreakerVideoPics/Screenshot_2023-03-08_170037.png)
 
 2. Open the Box Breaker Video Database Script and Connect to your local host (MSSQLLocalDB) and run the script.
-![alt text](BoxBreakerVideo/Box Breaker Video pics/connect.png "Connect")
-![alt text](BoxBreakerVideo/Box Breaker Video pics/connect2.png "Connect")
-![alt text](BoxBreakerVideo/Box Breaker Video pics/runScript.png "Connect")
+
+![alt text](BoxBreakerVideo/BoxBreakerVideoPics/connect.png "Connect")
+
+![alt text](BoxBreakerVideo/BoxBreakerVideoPics/connect2.png "Connect")
+
+![alt text](BoxBreakerVideo/BoxBreakerVideoPics/runScript.png "Connect")
 
 - The database will now be on your computer.
 
@@ -37,14 +41,16 @@ A movie rental app using Windows Forms .NET
 ### For Members 
 1. If your new, click New Member button, otherwise skip to step 3.
 (Alternitavely you can enter "test@test.com" for email and "test" for password to bypass this step.)
-![alt text](BoxBreakerVideo/Box Breaker Video pics/newMember.png "Member Button")
+
+![alt text](BoxBreakerVideo/BoxBreakerVideoPics/newMember.png "Member Button")
 
 2. Fill in all information correctly and click Register
 
 3. Fill in the login information you just made and click the login button and you will be taken to the Rental Form.
 
 4. Pick a movie you want to rent from the drop down menu and click add to order.
-![alt text](BoxBreakerVideo/Box Breaker Video pics/rentalFrom.png "Rental Form")
+
+![alt text](BoxBreakerVideo/BoxBreakerVideoPics/rentalFrom.png "Rental Form")
 
 5. When you are done with your selections click the checkout button. You will be taken to your order summary.
 
@@ -53,10 +59,12 @@ A movie rental app using Windows Forms .NET
 
 ### For Administrator
 1. To login as an administrator, your email address must be from test.com
-![alt text](BoxBreakerVideo/Box Breaker Video pics/adminLogin.png "")
+
+![alt text](BoxBreakerVideo/BoxBreakerVideoPics/adminLogin.png "")
 
 2.From the Admin form you can delete members and movies by title.
-![alt text](BoxBreakerVideo/Box Breaker Video pics/adminDelete.png "Admin Form")
+
+![alt text](BoxBreakerVideo/BoxBreakerVideoPics/adminDelete.png "Admin Form")
 
 3.From the admin form you can also click the add movie button to enter information for a new movie to be added,
 or click the edit button to edit the information of a movie which already exists in the database.
