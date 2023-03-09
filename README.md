@@ -23,12 +23,12 @@ A movie rental app using Windows Forms .NET
 ## Instructions
 - ### Install Database
 1. Clone Repository to your local drive.
-![alt text](BoxBreakerVideo/Box Breaker Video pics/Screenshot 2023-03-08 170037.png "Clone")
+[Connect](Box Breaker Video pics/connect.png)
 
 2. Open the Box Breaker Video Database Script and Connect to your local host (MSSQLLocalDB) and run the script.
-![alt text](/Box Breaker Video pics/connect.png "Connect")
-![alt text](/Box Breaker Video pics/connect2.png "Connect")
-![alt text](/Box Breaker Video pics/runScript.png "Connect")
+![alt text](BoxBreakerVideo/Box Breaker Video pics/connect.png "Connect")
+![alt text](BoxBreakerVideo/Box Breaker Video pics/connect2.png "Connect")
+![alt text](BoxBreakerVideo/Box Breaker Video pics/runScript.png "Connect")
 
 - The database will now be on your computer.
 
