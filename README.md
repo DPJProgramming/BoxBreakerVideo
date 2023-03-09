@@ -27,7 +27,7 @@ A movie rental app using Windows Forms .NET and C#.
 #### 1. Clone Repository to your local drive.
 
 <div>
-  <img src="https://github.com/DPJProgramming/BoxBreakerVideo/blob/David-Issue%2330-ReadMe/BoxBreakerVideo/BoxBreakerVideoPics/Clone.png" width=30% height=30%>
+  <img src="https://github.com/DPJProgramming/BoxBreakerVideo/blob/master/BoxBreakerVideo/BoxBreakerVideoPics/Clone.png" width=30% height=30%>
 </div>
 
 #### 2. Open the Box Breaker Video Database Script 
@@ -37,7 +37,7 @@ A movie rental app using Windows Forms .NET and C#.
 ![Connect](BoxBreakerVideo/BoxBreakerVideoPics/connect.png)
 
 <div>
-  <img src="https://github.com/DPJProgramming/BoxBreakerVideo/blob/David-Issue%2330-ReadMe/BoxBreakerVideo/BoxBreakerVideoPics/connect2.png" width=40% height=40%>
+  <img src="https://github.com/DPJProgramming/BoxBreakerVideo/blob/master/BoxBreakerVideo/BoxBreakerVideoPics/connect2.png" width=40% height=40%>
 </div>
 
 
@@ -46,26 +46,27 @@ A movie rental app using Windows Forms .NET and C#.
 ![Run Script](BoxBreakerVideo/BoxBreakerVideoPics/runScript.png)
 
 
-- The database will now be on your computer and you can run the app.
+(The database will now be on your computer and you can run the app.)
 
 
 ### For Members 
-#### 1. If you are new, click New Member button, otherwise skip to step 3.
-<sub> (You can also just enter "test@test.com" for email and "test" for password to bypass this step.)</sub>
+#### 1. If you are new, click the New Member button, otherwise skip to step 3.
+<sub> (You can also just enter "test@test.com" for email and "test" for password to bypass step 1 and 2.)</sub>
 
 <div>
-  <img src="https://github.com/DPJProgramming/BoxBreakerVideo/blob/David-Issue%2330-ReadMe/BoxBreakerVideo/BoxBreakerVideoPics/newMember.png" width=40% height=40%>
+  <img src="https://github.com/DPJProgramming/BoxBreakerVideo/blob/master/BoxBreakerVideo/BoxBreakerVideoPics/newMember.png" width=40% height=40%>
 </div>
 
 
 #### 2. Fill in all information correctly and click Register
+<sub>(To create an admin account make sure the email is from "@test.com")</sub>
 
 #### 3. Fill in your login information and click the login button. You will then be taken to the Rental Form.
 
 #### 4. Pick a movie you want to rent from the drop down menu and click add to order.
 
 <div>
-  <img src="https://github.com/DPJProgramming/BoxBreakerVideo/blob/David-Issue%2330-ReadMe/BoxBreakerVideo/BoxBreakerVideoPics/rentalForm.png" width=40% height=40%>
+  <img src="https://github.com/DPJProgramming/BoxBreakerVideo/blob/master/BoxBreakerVideo/BoxBreakerVideoPics/rentalForm.png" width=40% height=40%>
 </div>
 
 
@@ -76,21 +77,22 @@ A movie rental app using Windows Forms .NET and C#.
 
 ### For Administrator
 #### 1. To login as an administrator, your email address must be from test.com
+<sub>(The default admin already in the database is email: test@test.com password: test)</sub>
 
 <div>
-  <img src="https://github.com/DPJProgramming/BoxBreakerVideo/blob/David-Issue%2330-ReadMe/BoxBreakerVideo/BoxBreakerVideoPics/adminLogin.png" width=40% height=40%>
+  <img src="https://github.com/DPJProgramming/BoxBreakerVideo/blob/master/BoxBreakerVideo/BoxBreakerVideoPics/adminLogin.png" width=40% height=40%>
 </div>
 
 
-#### 2.From the Admin form you can delete members and movies by title.
+#### 2. From the Admin form you can delete members and movies by title.
 
 <div>
-  <img src="https://github.com/DPJProgramming/BoxBreakerVideo/blob/David-Issue%2330-ReadMe/BoxBreakerVideo/BoxBreakerVideoPics/adminDelete.png" width=40% height=40%>
+  <img src="https://github.com/DPJProgramming/BoxBreakerVideo/blob/master/BoxBreakerVideo/BoxBreakerVideoPics/adminDelete.png" width=40% height=40%>
 </div>
 
 
-#### 3.From the admin form you can also click the add movie button to enter information for a new movie to be added,
-or click the edit button to edit the information of a movie which already exists in the database.
+#### 3. From the admin form you can also click the add movie button to enter information for a new movie to be added,
+####    or click the edit button to edit the information of a movie which already exists in the database.
 
 # Credits
 
