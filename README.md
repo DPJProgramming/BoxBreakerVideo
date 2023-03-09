@@ -1,10 +1,11 @@
 # BoxBreakerVideo
-A movie rental app using Windows Forms .NET
+A movie rental app using Windows Forms .NET and C#.
 
 ## Dependencies
 - Visual Studio
 - .Net 6.0
 - Windows Operating System
+
 #### NuGet Packages
 - Microsoft.EntityFrameworkCore.Design
 - Microsoft.EntityFrameworkCore.SqlServer
@@ -17,40 +18,56 @@ A movie rental app using Windows Forms .NET
 - Summary form which shows chosen movies and price to checkout
 - New member form to create an account
 - Admin form allows for deleting a member or movie
-- add/edit movie forms adds a new movie or edits an existing one
+- Add/Edit movie forms adds a new movie or edits an existing one
 
 
 ## Instructions
-- ### Install Database
-1. Clone Repository to your local drive.
 
-![Connect](BoxBreakerVideo/BoxBreakerVideoPics/Screenshot_2023-03-08_170037.png)
+### Clone Repository and Install Database
+#### 1. Clone Repository to your local drive.
 
-2. Open the Box Breaker Video Database Script and Connect to your local host (MSSQLLocalDB) and run the script.
+<div>
+  <img src="https://github.com/DPJProgramming/BoxBreakerVideo/blob/David-Issue%2330-ReadMe/BoxBreakerVideo/BoxBreakerVideoPics/Clone.png" width=30% height=30%>
+</div>
 
-![alt text](BoxBreakerVideo/BoxBreakerVideoPics/connect.png "Connect")
+#### 2. Open the Box Breaker Video Database Script 
 
-![alt text](BoxBreakerVideo/BoxBreakerVideoPics/connect2.png "Connect")
+#### 3. Connect to your local host (MSSQLLocalDB)
 
-![alt text](BoxBreakerVideo/BoxBreakerVideoPics/runScript.png "Connect")
+![Connect](BoxBreakerVideo/BoxBreakerVideoPics/connect.png)
 
-- The database will now be on your computer.
+<div>
+  <img src="https://github.com/DPJProgramming/BoxBreakerVideo/blob/David-Issue%2330-ReadMe/BoxBreakerVideo/BoxBreakerVideoPics/connect2.png" width=40% height=40%>
+</div>
 
-- Press play button to run the app.
+
+#### 4. Run the script.
+
+![Run Script](BoxBreakerVideo/BoxBreakerVideoPics/runScript.png)
+
+
+- The database will now be on your computer and you can run the app.
+
 
 ### For Members 
-1. If your new, click New Member button, otherwise skip to step 3.
-(Alternitavely you can enter "test@test.com" for email and "test" for password to bypass this step.)
+#### 1. If you are new, click New Member button, otherwise skip to step 3.
+<sub> (You can also just enter "test@test.com" for email and "test" for password to bypass this step.)</sub>
 
-![alt text](BoxBreakerVideo/BoxBreakerVideoPics/newMember.png "Member Button")
+<div>
+  <img src="https://github.com/DPJProgramming/BoxBreakerVideo/blob/David-Issue%2330-ReadMe/BoxBreakerVideo/BoxBreakerVideoPics/newMember.png" width=40% height=40%>
+</div>
 
-2. Fill in all information correctly and click Register
 
-3. Fill in the login information you just made and click the login button and you will be taken to the Rental Form.
+#### 2. Fill in all information correctly and click Register
 
-4. Pick a movie you want to rent from the drop down menu and click add to order.
+#### 3. Fill in your login information and click the login button. You will then be taken to the Rental Form.
 
-![alt text](BoxBreakerVideo/BoxBreakerVideoPics/rentalFrom.png "Rental Form")
+#### 4. Pick a movie you want to rent from the drop down menu and click add to order.
+
+<div>
+  <img src="https://github.com/DPJProgramming/BoxBreakerVideo/blob/David-Issue%2330-ReadMe/BoxBreakerVideo/BoxBreakerVideoPics/rentalForm.png" width=40% height=40%>
+</div>
+
 
 5. When you are done with your selections click the checkout button. You will be taken to your order summary.
 
@@ -58,13 +75,24 @@ A movie rental app using Windows Forms .NET
 
 
 ### For Administrator
-1. To login as an administrator, your email address must be from test.com
+#### 1. To login as an administrator, your email address must be from test.com
 
-![alt text](BoxBreakerVideo/BoxBreakerVideoPics/adminLogin.png "")
+<div>
+  <img src="https://github.com/DPJProgramming/BoxBreakerVideo/blob/David-Issue%2330-ReadMe/BoxBreakerVideo/BoxBreakerVideoPics/adminLogin.png" width=40% height=40%>
+</div>
 
-2.From the Admin form you can delete members and movies by title.
 
-![alt text](BoxBreakerVideo/BoxBreakerVideoPics/adminDelete.png "Admin Form")
+#### 2.From the Admin form you can delete members and movies by title.
 
-3.From the admin form you can also click the add movie button to enter information for a new movie to be added,
+<div>
+  <img src="https://github.com/DPJProgramming/BoxBreakerVideo/blob/David-Issue%2330-ReadMe/BoxBreakerVideo/BoxBreakerVideoPics/adminDelete.png" width=40% height=40%>
+</div>
+
+
+#### 3.From the admin form you can also click the add movie button to enter information for a new movie to be added,
 or click the edit button to edit the information of a movie which already exists in the database.
+
+# Credits
+
+- [DPJProgramming](https://github.com/DPJProgramming)
+- [ZCooke1](https://github.com/Zcooke1)
