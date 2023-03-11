@@ -90,12 +90,12 @@ namespace BoxBreakerVideo.Forms
             //Connect to DB
             BoxBreakerVideoContext database = new BoxBreakerVideoContext();
 
-            //Grab selected movie from combobox.
-            string selectedTitle = cbxMovie.SelectedItem.ToString();
-            Movie selectedMovie = database.Movies.FirstOrDefault(movie => movie.Title == selectedTitle);
-
-            if (selectedMovie != null && isValid())
+            if (isValid())
             {
+                //Grab selected movie from combobox.
+                string selectedTitle = cbxMovie.SelectedItem.ToString();
+                Movie selectedMovie = database.Movies.FirstOrDefault(movie => movie.Title == selectedTitle);
+
                 //update selected movie object with new form info
                 selectedMovie.Title = txtbxTitle.Text;
                 selectedMovie.Genre = cbxGenre.Text;
@@ -107,11 +107,45 @@ namespace BoxBreakerVideo.Forms
                 selectedMovie.MoviePrice = Convert.ToDecimal(txtbxPrice.Text);
                 database.SaveChanges();
                 MessageBox.Show("Successfully edited movie.");
+
+                //Close form after completion
+                Close();
             }
         }
         private Boolean isValid()
         {
-            return true;
+            //variable for checking validity of data
+            decimal checkType;
+
+            //Checks that an item is selected
+            if (cbxMovie.SelectedItem == null)
+            {
+                MessageBox.Show("Please select a movie");
+                return false;
+            }
+
+            //checks that all fields are filled in
+            else if(txtbxTitle.Text == "" || txtbxDesc.Text == "" || txtbxRuntime.Text == "" ||
+                    dtpReleaseDate.Value == null || txtbxPrice.Text == "" || cbxGenre.Text == "" || 
+                    cbxMaturityRating.Text == "" || txtbxLink.Text == "") 
+            {
+                MessageBox.Show("Make sure all information is present");
+                return false;
+            }
+
+            //check that all fields are the right data type
+            else if (decimal.TryParse(txtbxTitle.Text, out checkType) || decimal.TryParse(txtbxDesc.Text, out checkType) ||
+                     decimal.TryParse(txtbxRuntime.Text, out checkType) || !decimal.TryParse(txtbxPrice.Text, out checkType) ||
+                     decimal.TryParse(cbxGenre.Text, out checkType) || decimal.TryParse(cbxMaturityRating.Text, out checkType) ||
+                     decimal.TryParse(txtbxLink.Text, out checkType)) 
+            {
+                MessageBox.Show("Make sure the information is of the correct type (i.e. Price is a number, 120Min(not just 120), ect)");
+                return false;
+            }
+            else 
+            {
+                return true;
+            }
         }
 
         private void cbxGenre_SelectedIndexChanged(object sender, EventArgs e)
