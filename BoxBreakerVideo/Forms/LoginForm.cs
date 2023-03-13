@@ -49,7 +49,13 @@ namespace BoxBreakerVideo {
         }
 
         private void button1_Click(object sender, EventArgs e) {
-            if (txtbxEmail.Text.Contains("test.com")) {
+
+            BoxBreakerVideoContext database = new BoxBreakerVideoContext();
+
+            string enteredEmail = txtbxEmail.Text;
+            Member administrator = database.Members.FirstOrDefault(a => a.MemberEmail.EndsWith("test.com"));
+
+            if (administrator != null && administrator.MemberEmail == enteredEmail) {
                 AdminForm admin = new AdminForm();
                 admin.ShowDialog();
             }
