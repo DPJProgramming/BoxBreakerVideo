@@ -70,16 +70,23 @@ namespace BoxBreakerVideo.Forms
                 Movie movie = database.Movies.FirstOrDefault(m => m.Title == movieTitle);
                 long movieId = movie.MovieId;
 
-                //Create new MemberMovie object and add it to the database
-                MemberMovie memberMovie = new MemberMovie()
+                //Check if the MemberMovie record exists in database
+                bool memberMovieExists = database.MemberMovies.Any(mm => mm.MovieId == movieId &&
+                                                                   mm.MemberId == memberId);
+                if (!memberMovieExists) 
                 {
-                    MovieId = movieId,
-                    MemberId = memberId,
-                    CheckoutDate = dtpDO.Value,
-                    DueDate = dtpDR.Value,
-                    Movie = movie
-                };
-                database.MemberMovies.Add(memberMovie);
+                    //Create new MemberMovie object and add it to the database
+                    MemberMovie memberMovie = new MemberMovie()
+                    {
+                        MovieId = movieId,
+                        MemberId = memberId,
+                        CheckoutDate = dtpDO.Value,
+                        DueDate = dtpDR.Value,
+                        Movie = movie
+                    };
+                    database.MemberMovies.Add(memberMovie);
+                }
+                
             }
 
             database.SaveChanges();
