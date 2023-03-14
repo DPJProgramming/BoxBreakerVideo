@@ -35,6 +35,7 @@ namespace BoxBreakerVideo.Forms {
         }
 
         private void button1_Click(object sender, EventArgs e) {
+
             //open database connection
             BoxBreakerVideoContext database = new BoxBreakerVideoContext();
 
@@ -54,13 +55,25 @@ namespace BoxBreakerVideo.Forms {
                 //insert new movie into database
                 database.Add(newMovie);
                 database.SaveChanges();
+
+                MessageBox.Show("Movie Added Successfully");
             }
-            else {
-                MessageBox.Show("Please enter all correct information");
-            }
+            
+            //if an entry is invalid the isValid method will show the appropriate warning message
         }
 
         private bool isValid() {
+            if (string.IsNullOrWhiteSpace(txtbxTitle.Text) || string.IsNullOrWhiteSpace(txtbxDescription.Text) || string.IsNullOrWhiteSpace(txtbxRuntime.Text) ||
+                datebxReleaseDate.Value == null || string.IsNullOrWhiteSpace(txtbxPrice.Text) || string.IsNullOrWhiteSpace(cmbbxGenre.Text) ||
+                string.IsNullOrWhiteSpace(cmbbxMaturityRating.Text) || string.IsNullOrWhiteSpace(txtbxMoviePoster.Text)) {
+
+                MessageBox.Show("Make sure all information is present");
+
+                return false;
+            }
+
+            
+
             return true;
         }
     }
