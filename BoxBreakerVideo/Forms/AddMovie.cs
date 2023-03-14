@@ -63,16 +63,29 @@ namespace BoxBreakerVideo.Forms {
         }
 
         private bool isValid() {
-            if (string.IsNullOrWhiteSpace(txtbxTitle.Text) || string.IsNullOrWhiteSpace(txtbxDescription.Text) || string.IsNullOrWhiteSpace(txtbxRuntime.Text) ||
-                datebxReleaseDate.Value == null || string.IsNullOrWhiteSpace(txtbxPrice.Text) || string.IsNullOrWhiteSpace(cmbbxGenre.Text) ||
-                string.IsNullOrWhiteSpace(cmbbxMaturityRating.Text) || string.IsNullOrWhiteSpace(txtbxMoviePoster.Text)) {
+            if (string.IsNullOrWhiteSpace(txtbxTitle.Text) || string.IsNullOrWhiteSpace(txtbxDescription.Text) ||
+               string.IsNullOrWhiteSpace(txtbxRuntime.Text) || datebxReleaseDate.Value == null ||
+               string.IsNullOrWhiteSpace(txtbxPrice.Text) || string.IsNullOrWhiteSpace(cmbbxGenre.Text) ||
+               string.IsNullOrWhiteSpace(cmbbxMaturityRating.Text) || string.IsNullOrWhiteSpace(txtbxMoviePoster.Text)) {
 
                 MessageBox.Show("Make sure all information is present");
 
                 return false;
             }
 
-            
+            //variable to check data type of text entries
+            decimal checkType;
+
+            //check that all fields are the right data type
+            if (decimal.TryParse(txtbxTitle.Text, out checkType) || decimal.TryParse(txtbxDescription.Text, out checkType) ||
+                decimal.TryParse(txtbxRuntime.Text, out checkType) || !decimal.TryParse(txtbxPrice.Text, out checkType) ||
+                decimal.TryParse(cmbbxGenre.Text, out checkType) || decimal.TryParse(cmbbxMaturityRating.Text, out checkType) ||
+                decimal.TryParse(txtbxMoviePoster.Text, out checkType)) {
+
+                MessageBox.Show("Make sure the information is of the correct type (i.e. Price is a number, 120Min(not just 120), ect)");
+
+                return false;
+            }
 
             return true;
         }
