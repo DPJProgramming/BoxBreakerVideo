@@ -80,35 +80,35 @@ namespace BoxBreakerVideo
 
 
             //Grab selected movie, string first to avoid wrapping issues (copied from cbx method)
+            if (cbxMovie.SelectedItem != null) {
+                string selectedTitle = cbxMovie.SelectedItem.ToString();
+                Movie selectedMovie = connection.Movies.FirstOrDefault(movie => movie.Title == selectedTitle);
 
-            string selectedTitle = cbxMovie.SelectedItem.ToString();
-            Movie selectedMovie = connection.Movies.FirstOrDefault(movie => movie.Title == selectedTitle);
+                //Check if movie is already in order
+                bool doesMovieExist = false;
+                foreach (ListViewItem item in lstViewOrder.Items) {
+                    if (item.Text.Contains(selectedMovie.Title)) {
+                        doesMovieExist = true;
+                        break;
+                    }
+                }
 
-            //Check if movie is already in order
-            bool doesMovieExist = false;
-            foreach (ListViewItem item in lstViewOrder.Items)
-            {
-                if (item.Text.Contains(selectedMovie.Title))
-                {
-                    doesMovieExist = true;
-                    break;
+                if (!doesMovieExist) {
+                    decimal currentTotal = (decimal)selectedMovie.MoviePrice;
+
+                    //Populate the listView with current order
+                    lstViewOrder.Items.Add(selectedMovie.Title + ", " + selectedMovie.MoviePrice);
+                    moviesRented.Add(selectedMovie.Title + ", " + selectedMovie.MoviePrice);
+                    total += currentTotal;
+                    txtbxTotal.Text = Convert.ToString(total);
+
+                }
+                else {
+                    MessageBox.Show("Movie is already in the order.");
                 }
             }
-
-            if (!doesMovieExist)
-            {
-                decimal currentTotal = (decimal)selectedMovie.MoviePrice;
-
-                //Populate the listView with current order
-                lstViewOrder.Items.Add(selectedMovie.Title + ", " + selectedMovie.MoviePrice);
-                moviesRented.Add(selectedMovie.Title + ", " + selectedMovie.MoviePrice);
-                total += currentTotal;
-                txtbxTotal.Text = Convert.ToString(total);
-                
-            }
-            else
-            {
-                MessageBox.Show("Movie is already in the order.");
+            else {
+                MessageBox.Show("Please select a movie first");
             }
         }
 
