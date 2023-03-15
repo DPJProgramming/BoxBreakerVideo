@@ -74,11 +74,15 @@ namespace BoxBreakerVideo {
 
             BoxBreakerVideoContext database = new BoxBreakerVideoContext();
 
+            //set text boxes to variables an create a member if there is a matching member in the database
             string enteredEmail = txtbxEmail.Text;
-            Member administrator = database.Members.FirstOrDefault(a => a.MemberEmail.EndsWith("test.com"));
+            string enteredPassword = txtbxPassword.Text;
+            Member? administrator = database.Members.FirstOrDefault(a => a.MemberEmail == enteredEmail);
 
-            if (administrator != null && administrator.MemberEmail == enteredEmail) {
+            //if the member exists and the email ends with test.com and they entered the correct password, access granted
+            if (administrator != null && administrator.MemberEmail.EndsWith("test.com") && administrator.MemberPassword == enteredPassword){
                 AdminForm admin = new AdminForm();
+                MessageBox.Show("Access Granted");
                 admin.ShowDialog();
             }
             else {
