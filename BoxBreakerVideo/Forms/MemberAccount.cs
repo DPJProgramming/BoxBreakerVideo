@@ -25,15 +25,18 @@ namespace BoxBreakerVideo.Forms {
 
             foreach (MemberMovie movie in movieList) {
 
+                //get title of movie from id
+                string? movieTitle = (from m in database.Movies where m.MovieId == movie.MovieId select m.Title).SingleOrDefault();
+
                 //If movie is due, remove it from members account
                 //To test quickly, add to DateTime.Now.Today + 8
                 if (movie.DueDate.Day < DateTime.Now.Day) {
+                    MessageBox.Show($"{movieTitle} was due on {movie.DueDate} and will be removed");
                     database.MemberMovies.Remove(movie);
                     database.SaveChanges();
                 }
                 else {
-                    //get title of movie from id
-                    string? movieTitle = (from m in database.Movies where m.MovieId == movie.MovieId select m.Title).SingleOrDefault();
+                    //movieTitle = (from m in database.Movies where m.MovieId == movie.MovieId select m.Title).SingleOrDefault();
 
                     //fill in information on form
                     lstbxMovieList.Items.Add(movieTitle + "          " + movie.CheckoutDate.Date + "        " + "       " + movie.DueDate.Date);
