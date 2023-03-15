@@ -35,7 +35,7 @@ namespace BoxBreakerVideo.Forms
             decimal total = 0;
             txtbxFName.Text = memberFullName;
             dtpDO.Value = DateTime.Today;
-            dtpDR.Value = DateTime.Today.AddDays(10);
+            dtpDR.Value = DateTime.Today.AddDays(7);
             foreach (string rentedMovie in moviesRented)
             {
                 lstviewRented.Items.Add(rentedMovie);
