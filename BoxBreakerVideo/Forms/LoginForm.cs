@@ -13,7 +13,7 @@ namespace BoxBreakerVideo {
         }
 
         /// <summary>
-        /// opens a new form to rent a movie is user login is successful
+        /// opens a new form to rent a movie if user login is successful
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -22,10 +22,9 @@ namespace BoxBreakerVideo {
             BoxBreakerVideoContext database = new BoxBreakerVideoContext();
 
             //if credentials are valid based on Where query, open rental form
-            if (database.Members.Where(data => data.MemberEmail == txtbxEmail.Text && data.MemberPassword == txtbxPassword.Text).Any())
-            {
+            if (isValid(database)) {
                 //Retrieve logged-in members data
-                Member loggedInMember = database.Members.FirstOrDefault(data => data.MemberEmail == txtbxEmail.Text && data.MemberPassword == txtbxPassword.Text);
+                Member loggedInMember = GetLoggedInMember(database);
 
                 //Store member's full name in variable
                 string memberFullName = $"{loggedInMember.MemberFname} {loggedInMember.MemberLname}";
@@ -39,6 +38,24 @@ namespace BoxBreakerVideo {
             }
         }
 
+        /// <summary>
+        /// makes a member object from login credentials
+        /// </summary>
+        /// <param name="database"></param>
+        /// <returns></returns>
+        private Member? GetLoggedInMember(BoxBreakerVideoContext database) {
+            return database.Members.FirstOrDefault(data => data.MemberEmail == txtbxEmail.Text && data.MemberPassword == txtbxPassword.Text);
+        }
+
+        /// <summary>
+        /// checks if logging in member is in database aka already a member
+        /// </summary>
+        /// <param name="database"></param>
+        /// <returns></returns>
+        private bool isValid(BoxBreakerVideoContext database) {
+            return database.Members.Where(data => data.MemberEmail == txtbxEmail.Text && data.MemberPassword == txtbxPassword.Text).Any();
+        }
+
         private void btnCancel_Click(object sender, EventArgs e) {
             Close();
         }
@@ -48,6 +65,11 @@ namespace BoxBreakerVideo {
             newMember.ShowDialog();
         }
 
+        /// <summary>
+        /// Opens an administration form 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e) {
 
             BoxBreakerVideoContext database = new BoxBreakerVideoContext();
@@ -61,6 +83,23 @@ namespace BoxBreakerVideo {
             }
             else {
                 MessageBox.Show("Access Denied");
+            }
+        }
+
+        /// <summary>
+        /// Opens a form which Allows a member to view their currently checked out movies if their login credentials are valid
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnViewAccount_Click(object sender, EventArgs e) {
+
+            BoxBreakerVideoContext database = new BoxBreakerVideoContext();
+            
+            if (isValid(database)) {
+
+                Member loggedInMember = GetLoggedInMember(database);
+                MemberAccount accountForm = new MemberAccount(loggedInMember, database);
+                accountForm.ShowDialog();
             }
         }
     }

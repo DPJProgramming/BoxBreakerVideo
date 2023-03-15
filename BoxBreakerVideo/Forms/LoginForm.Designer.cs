@@ -31,6 +31,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnNewUser = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnViewAccount = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -105,11 +106,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnViewAccount
+            // 
+            this.btnViewAccount.Location = new System.Drawing.Point(184, 446);
+            this.btnViewAccount.Name = "btnViewAccount";
+            this.btnViewAccount.Size = new System.Drawing.Size(173, 83);
+            this.btnViewAccount.TabIndex = 8;
+            this.btnViewAccount.Text = "View Account";
+            this.btnViewAccount.UseVisualStyleBackColor = true;
+            this.btnViewAccount.Click += new System.EventHandler(this.btnViewAccount_Click);
+            // 
             // formUserLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(537, 450);
+            this.ClientSize = new System.Drawing.Size(537, 541);
+            this.Controls.Add(this.btnViewAccount);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnNewUser);
             this.Controls.Add(this.label2);
@@ -136,5 +148,6 @@
         private Label label2;
         private Button btnNewUser;
         private Button button1;
+        private Button btnViewAccount;
     }
 }

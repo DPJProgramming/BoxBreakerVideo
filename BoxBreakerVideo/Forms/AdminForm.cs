@@ -49,10 +49,6 @@ namespace BoxBreakerVideo.Forms
                 MessageBox.Show("Movie Not Found");
             }
 
-
-
-
-
         }
 
         private void button2_Click(object sender, EventArgs e)
