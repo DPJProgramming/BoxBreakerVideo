@@ -19,6 +19,7 @@ A movie rental app using Windows Forms .NET and C#.
 - New member form to create an account
 - Admin form allows for deleting a member or movie
 - Add/Edit movie forms adds a new movie or edits an existing one
+- Account page with list of currently checked out movies and due date functionality
 
 
 ## Instructions
