@@ -28,9 +28,9 @@ namespace BoxBreakerVideo {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e) {
+            BoxBreakerVideoContext database = new();
 
-            if (validInputs()) {
-                using BoxBreakerVideoContext database = new();
+            if (validInputs(database)) {
 
                 //insert into database
                 Member newMember = new Member() {
@@ -56,7 +56,7 @@ namespace BoxBreakerVideo {
         /// validates input from new member form
         /// </summary>
         /// <returns> true if inputs are valid false if not</returns>
-        private bool validInputs() {
+        private bool validInputs(BoxBreakerVideoContext database) {
 
             //validate first name
             //if its blank or contains something other than letters
@@ -72,7 +72,7 @@ namespace BoxBreakerVideo {
 
             //validate Email
             //if field is blank or in the wrong format
-            if (txtbxEmail.Text.Equals("")) {
+            if (string.IsNullOrWhiteSpace(txtbxEmail.Text)) {
                 return false;
             }
             try { 
@@ -80,7 +80,14 @@ namespace BoxBreakerVideo {
             }
             catch {
                 return false;
-            }    
+            }
+
+            //Checks if email is already in the database
+            var doesEmailExist = database.Members.Where(m => m.MemberEmail == txtbxEmail.Text);
+            if (doesEmailExist != null) {
+                MessageBox.Show("Email already exists");
+                return false;
+            }
             
             //validate shipping address
             //if it's blank
