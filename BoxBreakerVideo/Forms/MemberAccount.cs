@@ -29,10 +29,9 @@ namespace BoxBreakerVideo.Forms {
                 string? movieTitle = (from m in database.Movies where m.MovieId == movie.MovieId select m.Title).SingleOrDefault();
 
                 //If movie is due, remove it from members account
-                //To test quickly, uncomment and use testDate variable instead of DateTime.Today in if statement
-                //DateTime testDate = DateTime.Today.AddDays(8);
+                //To test quickly, append .AddDays(8) to DateTime.Today in if statement
                 if (movie.DueDate < DateTime.Today) {
-                    MessageBox.Show($"{movieTitle} was due on {movie.DueDate} and will be removed");
+                    MessageBox.Show($"{movieTitle} was due on {movie.DueDate.ToShortDateString()} and will be removed");
                     database.MemberMovies.Remove(movie);
                     database.SaveChanges();
                 }
