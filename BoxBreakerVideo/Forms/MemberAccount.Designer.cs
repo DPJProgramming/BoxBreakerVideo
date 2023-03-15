@@ -26,10 +26,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblFirstName = new System.Windows.Forms.Label();
-            this.lstbxMovieList = new System.Windows.Forms.ListBox();
+            this.lstbxMovieTitles = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.lstbxCheckoutDate = new System.Windows.Forms.ListBox();
+            this.lstbxDueDate = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -62,14 +64,14 @@
             this.lblFirstName.TabIndex = 2;
             this.lblFirstName.Text = "User";
             // 
-            // lstbxMovieList
+            // lstbxMovieTitles
             // 
-            this.lstbxMovieList.FormattingEnabled = true;
-            this.lstbxMovieList.ItemHeight = 20;
-            this.lstbxMovieList.Location = new System.Drawing.Point(100, 173);
-            this.lstbxMovieList.Name = "lstbxMovieList";
-            this.lstbxMovieList.Size = new System.Drawing.Size(523, 244);
-            this.lstbxMovieList.TabIndex = 3;
+            this.lstbxMovieTitles.FormattingEnabled = true;
+            this.lstbxMovieTitles.ItemHeight = 20;
+            this.lstbxMovieTitles.Location = new System.Drawing.Point(28, 173);
+            this.lstbxMovieTitles.Name = "lstbxMovieTitles";
+            this.lstbxMovieTitles.Size = new System.Drawing.Size(217, 244);
+            this.lstbxMovieTitles.TabIndex = 3;
             // 
             // label3
             // 
@@ -83,7 +85,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(239, 141);
+            this.label4.Location = new System.Drawing.Point(327, 141);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(112, 20);
             this.label4.TabIndex = 5;
@@ -92,21 +94,41 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(461, 141);
+            this.label5.Location = new System.Drawing.Point(628, 141);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 20);
             this.label5.TabIndex = 6;
             this.label5.Text = "Due Date";
+            // 
+            // lstbxCheckoutDate
+            // 
+            this.lstbxCheckoutDate.FormattingEnabled = true;
+            this.lstbxCheckoutDate.ItemHeight = 20;
+            this.lstbxCheckoutDate.Location = new System.Drawing.Point(282, 173);
+            this.lstbxCheckoutDate.Name = "lstbxCheckoutDate";
+            this.lstbxCheckoutDate.Size = new System.Drawing.Size(219, 244);
+            this.lstbxCheckoutDate.TabIndex = 7;
+            // 
+            // lstbxDueDate
+            // 
+            this.lstbxDueDate.FormattingEnabled = true;
+            this.lstbxDueDate.ItemHeight = 20;
+            this.lstbxDueDate.Location = new System.Drawing.Point(555, 173);
+            this.lstbxDueDate.Name = "lstbxDueDate";
+            this.lstbxDueDate.Size = new System.Drawing.Size(219, 244);
+            this.lstbxDueDate.TabIndex = 8;
             // 
             // MemberAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lstbxDueDate);
+            this.Controls.Add(this.lstbxCheckoutDate);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.lstbxMovieList);
+            this.Controls.Add(this.lstbxMovieTitles);
             this.Controls.Add(this.lblFirstName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -122,9 +144,11 @@
         private Label label1;
         private Label label2;
         private Label lblFirstName;
-        private ListBox lstbxMovieList;
+        private ListBox lstbxMovieTitles;
         private Label label3;
         private Label label4;
         private Label label5;
+        private ListBox lstbxCheckoutDate;
+        private ListBox lstbxDueDate;
     }
 }
