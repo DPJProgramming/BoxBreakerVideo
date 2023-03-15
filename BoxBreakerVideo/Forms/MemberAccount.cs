@@ -16,7 +16,6 @@ namespace BoxBreakerVideo.Forms {
         public MemberAccount(Member loggedInMember, BoxBreakerVideoContext database) {
             InitializeComponent();
 
-
             //For welcome message showing members first name
             lblFirstName.Text = loggedInMember.MemberFname;
             lstbxMovieList.Items.Clear();
@@ -26,10 +25,19 @@ namespace BoxBreakerVideo.Forms {
 
             foreach (MemberMovie movie in movieList) {
 
-                string? movieTitle = (from m in database.Movies where m.MovieId == movie.MovieId select m.Title).SingleOrDefault();
+                //If movie is due, remove it from members account
+                //To test quickly, add to DateTime.Now.Today + 8
+                if (movie.DueDate.Day < DateTime.Now.Day) {
+                    database.MemberMovies.Remove(movie);
+                    database.SaveChanges();
+                }
+                else {
+                    //get title of movie from id
+                    string? movieTitle = (from m in database.Movies where m.MovieId == movie.MovieId select m.Title).SingleOrDefault();
 
-                //string title = database.Movies.Where(m => m.MovieId == movie.MovieId)
-                lstbxMovieList.Items.Add(movieTitle + "          " + movie.CheckoutDate.Date + "        " + "       " + movie.DueDate.Date);
+                    //fill in information on form
+                    lstbxMovieList.Items.Add(movieTitle + "          " + movie.CheckoutDate.Date + "        " + "       " + movie.DueDate.Date);
+                }
             }
         }
     }
