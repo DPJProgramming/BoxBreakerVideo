@@ -28,6 +28,11 @@ namespace BoxBreakerVideo.Forms
             Close();
         }
 
+        /// <summary>
+        /// Deletes a movie based on Title entered in text box by administrator
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -51,6 +56,11 @@ namespace BoxBreakerVideo.Forms
 
         }
 
+        /// <summary>
+        /// Deletes a member from the members table by email entered in the text box input
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             //make new connection to database
